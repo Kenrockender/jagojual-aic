@@ -1,5 +1,10 @@
 # Model — Fine-tuning (dikerjakan di Kaggle)
 
+> 📘 **Mau langsung jalan?** Ikuti [`TRAINING.md`](TRAINING.md) — runbook langkah demi
+> langkah dari dataset sampai adapter yang jalan di backend, lengkap dengan cara
+> memastikan tiap langkah benar dan troubleshooting. Dokumen di bawah ini rujukan
+> desain & status skrip.
+
 > **Offline & sekali jalan.** Skrip di folder ini TIDAK dipanggil backend saat
 > demo (sesuai batasan MVP rulebook: inferensi berparameter statis). Output-nya
 > berupa **adapter LoRA** yang di-commit ke `../checkpoints/` lalu di-load backend

@@ -54,6 +54,8 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--grad-accum", type=int, default=8)
     ap.add_argument("--warmup-ratio", type=float, default=0.03)
     ap.add_argument("--save-steps", type=int, default=100, help="Checkpoint berkala (sesi Kaggle bisa mati).")
+    ap.add_argument("--resume", action="store_true",
+                    help="Lanjutkan dari checkpoint terakhir di --out (sesi Kaggle mati di tengah jalan).")
     ap.add_argument("--seed", type=int, default=42)
 
     ap.add_argument("--lora-r", type=int, default=16)
@@ -156,7 +158,12 @@ def main() -> int:
         model_init_kwargs={"quantization_config": quant, "torch_dtype": dtype, "device_map": "auto"},
     )
 
-    trainer.train()
+    # Hanya resume kalau memang ada checkpoint; kalau tidak, Trainer melempar error
+    # dan sesi Kaggle yang sudah antre lama jadi terbuang percuma.
+    ada_checkpoint = args.resume and any(args.out.glob("checkpoint-*"))
+    if args.resume and not ada_checkpoint:
+        print(f"--resume diminta tapi tidak ada checkpoint-* di {args.out}; mulai dari awal.")
+    trainer.train(resume_from_checkpoint=ada_checkpoint or None)
 
     args.out.mkdir(parents=True, exist_ok=True)
     trainer.save_model(str(args.out))
