@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jagojual/dialog.schema.json",
+  "title": "JagoJual Dialog (level sumber)",
+  "description": "Satu dialog jualan bergrounding. Sumber tunggal yang di-flatten jadi contoh SFT mode Pelanggan & mode Pelatih (lihat model/training/2_prepare_sft.py).",
+  "type": "object",
+  "required": ["scenario_id", "bidang", "produk", "persona", "turns"],
+  "additionalProperties": false,
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^(otomotif|elektronik)_[a-z0-9_]+_[0-9]{2,}$",
+      "description": "Format: <bidang>_<topik_keberatan>_<nomor>, mis. otomotif_boros_bbm_01."
+    },
+    "bidang": {"type": "string", "enum": ["otomotif", "elektronik"]},
+    "produk": {"type": "string", "minLength": 2},
+    "persona": {
+      "type": "object",
+      "required": ["tipe", "emosi_awal"],
+      "additionalProperties": false,
+      "properties": {
+        "tipe": {"type": "string", "enum": ["skeptis", "buru_buru", "sensitif_harga", "banyak_tanya", "loyal_merk_lain", "cuma_lihat"]},
+        "emosi_awal": {"type": "string"}
+      }
+    },
+    "grounding": {
+      "type": "object",
+      "description": "Jejak reproduksibilitas: framework & generator asal dialog ini.",
+      "additionalProperties": false,
+      "properties": {
+        "framework": {"type": "array", "items": {"type": "string"}},
+        "generator": {"type": "string", "description": "Model/sumber, mis. 'qwen2.5-72b', 'gpt-4o', 'manual-seed', 'transkrip-asli'."},
+        "divalidasi_manusia": {"type": "boolean", "default": false}
+      }
+    },
+    "turns": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["speaker", "text"],
+        "additionalProperties": false,
+        "properties": {
+          "speaker": {"type": "string", "enum": ["pelanggan", "sales"]},
+          "text": {"type": "string", "minLength": 1},
+          "teknik": {
+            "type": ["string", "null"],
+            "enum": ["sapa_rapport", "gali_kebutuhan", "presentasi_manfaat", "atasi_keberatan", "closing", "upsell", null],
+            "description": "Wajib pada turn 'sales', null/absen pada turn 'pelanggan'."
+          },
+          "kualitas": {
+            "type": ["string", "null"],
+            "enum": ["baik", "lemah", null],
+            "description": "Wajib pada turn 'sales'."
+          },
+          "keberatan": {
+            "type": ["string", "null"],
+            "enum": ["harga", "bandingkan_kompetitor", "ragu_kualitas", "tidak_butuh", "mau_pikir_pikir", "cuma_lihat_lihat", null],
+            "description": "Diisi pada turn 'pelanggan' saat mengandung keberatan; null jika tidak."
+          },
+          "emosi": {"type": ["string", "null"], "description": "Metadata opsional turn pelanggan."}
+        }
+      }
+    }
+  }
+}

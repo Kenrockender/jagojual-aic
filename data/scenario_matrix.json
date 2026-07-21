@@ -1,0 +1,3011 @@
+{
+  "meta": {
+    "versi_taksonomi": "1.0",
+    "seed": 42,
+    "per_bidang": 150,
+    "total": 300,
+    "rasio_varian_campur": 0.3
+  },
+  "sel": [
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_23",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_20",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_15",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_23",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_13",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_25",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_12",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_03",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_02",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_11",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_14",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_11",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_23",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_05",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_15",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_17",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_02",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_02",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_01",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_01",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_05",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_25",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_18",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_04",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_17",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_16",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_04",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_20",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_03",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_15",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_09",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_16",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_04",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_11",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_09",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_08",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_23",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_14",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_16",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_21",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_20",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_10",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_13",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_04",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_25",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_06",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_04",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_07",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_25",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_08",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_18",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_10",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_10",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_22",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_20",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_15",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_06",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_05",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_22",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_01",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_17",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_03",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_16",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_01",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_24",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_23",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_23",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_22",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_02",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_12",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_13",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_06",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_22",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_21",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_12",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_13",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_01",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_03",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_24",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_21",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_14",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_10",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_24",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_05",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_11",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_24",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_07",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_09",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_19",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_19",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_17",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_22",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_18",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_14",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_19",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_15",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_02",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_08",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_11",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_08",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_09",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_17",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_07",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_19",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_10",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_14",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_05",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_21",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_06",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_07",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_12",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_13",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_25",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_03",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_04",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_19",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_01",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_07",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_05",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_21",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_24",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_24",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_20",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_18",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_18",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_20",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_03",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_25",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_22",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_11",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_12",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_10",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_09",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_18",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_15",
+      "bidang": "otomotif",
+      "produk": "mobil bekas sertifikasi",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_16",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_19",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_02",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_07",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_09",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_06",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_12",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_boros_bbm_17",
+      "bidang": "otomotif",
+      "produk": "MPV keluarga 7-seater",
+      "topik_keberatan": "boros_bbm",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_08",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_bandingkan_merk_14",
+      "bidang": "otomotif",
+      "produk": "city car hatchback",
+      "topik_keberatan": "bandingkan_merk",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_dp_cicilan_06",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "dp_cicilan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_16",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_konsultasi_pasangan_08",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "konsultasi_pasangan",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya diskusi dulu sama istri ya.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_ruang_kabin_13",
+      "bidang": "otomotif",
+      "produk": "SUV compact",
+      "topik_keberatan": "ruang_kabin",
+      "keberatan_global": "tidak_butuh",
+      "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "otomotif_harga_jual_kembali_21",
+      "bidang": "otomotif",
+      "produk": "LCGC 1.000cc",
+      "topik_keberatan": "harga_jual_kembali",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_09",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_23",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_17",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_17",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_15",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_23",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_06",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_25",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_06",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_13",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_08",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_03",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_09",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_23",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_23",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_05",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_20",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_24",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_01",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_garansi_17",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_06",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_16",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_06",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_20",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_12",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_01",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_garansi_08",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_02",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_16",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_13",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_25",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_20",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_14",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_19",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_garansi_22",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_10",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_15",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_14",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_05",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_03",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_21",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_19",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_19",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_24",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_25",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_02",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_01",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_02",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_20",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_15",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_16",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_25",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_03",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_04",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_18",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_04",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_13",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_01",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_24",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_24",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_12",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_02",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_05",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_03",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_09",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_22",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_05",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_20",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_04",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_11",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_20",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_11",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_18",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_10",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_18",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_12",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_10",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_21",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_08",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_garansi_06",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_03",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_21",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_11",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_07",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_08",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_09",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_12",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_19",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_21",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_17",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_21",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_16",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_15",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_18",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_04",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_07",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_16",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_02",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_08",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_18",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_21",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_10",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_13",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_18",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_09",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_16",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_07",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_22",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_14",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_10",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_17",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_15",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_04",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_23",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_garansi_04",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_05",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_25",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_14",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_14",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_06",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_11",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_22",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_15",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_01",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_14",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_09",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_10",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_12",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_03",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_02",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_24",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_25",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_07",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "loyal_merk_lain",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_17",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_19",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_kemahalan_22",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "kemahalan",
+      "keberatan_global": "harga",
+      "contoh_ucapan": "Wah over budget saya nih.",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_13",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_12",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_07",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_garansi_13",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_01",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "sensitif_harga",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_08",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_awet_05",
+      "bidang": "elektronik",
+      "produk": "kulkas 2 pintu",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "buru_buru",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_11",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "skeptis",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_24",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_awet_11",
+      "bidang": "elektronik",
+      "produk": "TV LED 43 inch",
+      "topik_keberatan": "awet",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak.",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_lihat_lihat_07",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "lihat_lihat",
+      "keberatan_global": "cuma_lihat_lihat",
+      "contoh_ucapan": "Lihat-lihat dulu aja mas.",
+      "persona": "cuma_lihat",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_spek_bingung_23",
+      "bidang": "elektronik",
+      "produk": "AC 1 PK inverter",
+      "topik_keberatan": "spek_bingung",
+      "keberatan_global": "mau_pikir_pikir",
+      "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya.",
+      "persona": "skeptis",
+      "varian_kualitas": "campur"
+    },
+    {
+      "scenario_id": "elektronik_harga_toko_sebelah_22",
+      "bidang": "elektronik",
+      "produk": "mesin cuci front-loading",
+      "topik_keberatan": "harga_toko_sebelah",
+      "keberatan_global": "bandingkan_kompetitor",
+      "contoh_ucapan": "Di toko sebelah kok lebih murah?",
+      "persona": "banyak_tanya",
+      "varian_kualitas": "kuat"
+    },
+    {
+      "scenario_id": "elektronik_garansi_19",
+      "bidang": "elektronik",
+      "produk": "smartphone mid-range",
+      "topik_keberatan": "garansi",
+      "keberatan_global": "ragu_kualitas",
+      "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?",
+      "persona": "buru_buru",
+      "varian_kualitas": "kuat"
+    }
+  ]
+}

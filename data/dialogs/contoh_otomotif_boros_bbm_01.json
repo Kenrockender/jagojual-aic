@@ -1,0 +1,24 @@
+{
+  "scenario_id": "otomotif_boros_bbm_01",
+  "bidang": "otomotif",
+  "produk": "SUV compact 1.500cc",
+  "persona": {"tipe": "skeptis", "emosi_awal": "ragu"},
+  "grounding": {
+    "framework": ["SPIN", "AIDA", "objection-handling"],
+    "generator": "manual-seed",
+    "divalidasi_manusia": true
+  },
+  "turns": [
+    {"speaker": "sales", "text": "Selamat siang, Pak. Silakan, boleh saya bantu? Lagi cari mobil untuk keperluan apa nih, harian atau keluarga?", "teknik": "sapa_rapport", "kualitas": "baik"},
+    {"speaker": "pelanggan", "text": "Ini buat harian sih, tapi kadang bawa keluarga juga. Cuma SUV gini boros nggak sih bensinnya?", "keberatan": "ragu_kualitas", "emosi": "ragu"},
+    {"speaker": "sales", "text": "Boleh tahu biasanya sehari kira-kira berapa kilometer, Pak? Dan rutenya lebih banyak dalam kota atau luar kota?", "teknik": "gali_kebutuhan", "kualitas": "baik"},
+    {"speaker": "pelanggan", "text": "Ya paling 40 km pulang-pergi kantor, dalam kota macet.", "keberatan": null, "emosi": "netral"},
+    {"speaker": "sales", "text": "Nah untuk pemakaian dalam kota seperti itu, tipe ini sudah mesin injeksi dengan mode Eco, rata-rata pemilik kami dapat sekitar 13-14 km per liter dalam kota. Jadi untuk 40 km sehari kira-kira 3 liter, masih hemat untuk ukuran SUV, Pak.", "teknik": "presentasi_manfaat", "kualitas": "baik"},
+    {"speaker": "pelanggan", "text": "Hmm tapi kan itu klaim pabrik, aslinya beda biasanya.", "keberatan": "ragu_kualitas", "emosi": "skeptis"},
+    {"speaker": "sales", "text": "Betul, Pak, wajar ragu. Makanya ini bukan angka brosur — itu catatan konsumsi dari beberapa pelanggan kami yang rutenya mirip Bapak. Kalau berkenan, saat test drive nanti kita nyalakan indikator konsumsi real-time, jadi Bapak lihat sendiri angkanya, bukan cuma percaya kata saya.", "teknik": "atasi_keberatan", "kualitas": "baik"},
+    {"speaker": "pelanggan", "text": "Oke boleh juga. Tapi DP-nya berat nggak?", "keberatan": "harga", "emosi": "hati_hati"},
+    {"speaker": "sales", "text": "Kita ada dua skema, Pak: DP ringan 20% dengan cicilan sedikit lebih panjang, atau DP 30% biar cicilan bulanannya lebih enteng. Bapak lebih nyaman yang mana, saya hitungkan simulasinya sekarang?", "teknik": "closing", "kualitas": "baik"},
+    {"speaker": "pelanggan", "text": "Coba yang DP 20% dulu deh.", "keberatan": null, "emosi": "tertarik"},
+    {"speaker": "sales", "text": "Siap. Sekalian kalau Bapak ambil bulan ini, ada paket perlindungan cat dan servis gratis 1 tahun — lumayan untuk jaga nilai jual kembalinya nanti. Saya masukkan ke simulasinya ya?", "teknik": "upsell", "kualitas": "baik"}
+  ]
+}

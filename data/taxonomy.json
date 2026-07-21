@@ -1,0 +1,120 @@
+{
+  "_catatan": "Sumber kebenaran tunggal taksonomi label dataset JagoJual. Diselaraskan dengan backend/app/schemas.py (TEKNIK). Semua skrip generator & prepare-SFT membaca file ini — jangan hardcode label di tempat lain.",
+  "versi": "1.0",
+
+  "teknik": {
+    "_deskripsi": "Teknik jualan yang dinilai pada turn SALES. SAMA di semua bidang. Urutan = alur ideal, tapi tidak wajib berurutan.",
+    "label": [
+      {
+        "id": "sapa_rapport",
+        "nama": "Sapaan & Rapport",
+        "definisi": "Membuka percakapan, membangun kepercayaan & kenyamanan sebelum menjual.",
+        "sinyal_baik": "Ramah, menyebut nama, mendengarkan, tidak langsung menodong produk.",
+        "referensi": "AIDA (Attention)"
+      },
+      {
+        "id": "gali_kebutuhan",
+        "nama": "Menggali Kebutuhan",
+        "definisi": "Bertanya untuk memahami situasi, masalah, dan kebutuhan pelanggan sebelum menawarkan.",
+        "sinyal_baik": "Pertanyaan terbuka bertingkat (situasi -> masalah -> implikasi -> kebutuhan).",
+        "referensi": "SPIN (Situation/Problem/Implication/Need-Payoff), needs-based selling"
+      },
+      {
+        "id": "presentasi_manfaat",
+        "nama": "Presentasi Manfaat",
+        "definisi": "Menjelaskan produk dalam bentuk MANFAAT yang relevan dengan kebutuhan yang tergali, bukan sekadar daftar fitur.",
+        "sinyal_baik": "Fitur -> manfaat -> dikaitkan ke kebutuhan pelanggan; pakai bukti/angka/testimoni.",
+        "referensi": "AIDA (Interest/Desire), FAB (Feature-Advantage-Benefit)"
+      },
+      {
+        "id": "atasi_keberatan",
+        "nama": "Mengatasi Keberatan",
+        "definisi": "Menanggapi keraguan/penolakan pelanggan dengan empati lalu memberi nilai, bukan langsung diskon atau memaksa.",
+        "sinyal_baik": "Akui keberatan -> klarifikasi -> jawab dengan nilai/bukti -> cek ulang. Tidak defensif.",
+        "referensi": "Objection handling (feel-felt-found), SPIN (cegah keberatan lewat gali kebutuhan)"
+      },
+      {
+        "id": "closing",
+        "nama": "Closing",
+        "definisi": "Mengarahkan ke keputusan pembelian dengan ajakan yang jelas namun tidak menekan.",
+        "sinyal_baik": "Alternative close, assumptive close, urgency wajar; ada call-to-action konkret.",
+        "referensi": "AIDA (Action)"
+      },
+      {
+        "id": "upsell",
+        "nama": "Upsell / Cross-sell",
+        "definisi": "Menawarkan peningkatan/pelengkap yang relevan dan menambah nilai bagi pelanggan.",
+        "sinyal_baik": "Relevan dengan kebutuhan, dibingkai sebagai nilai (bukan sekadar 'tambah mahal').",
+        "referensi": "Value-based selling"
+      }
+    ]
+  },
+
+  "kualitas": {
+    "_deskripsi": "Label mutu turn SALES. Dipakai untuk contoh 'sales kuat vs lemah' agar model belajar bedanya (PLAN.md §6).",
+    "label": ["baik", "lemah"],
+    "definisi": {
+      "baik": "Teknik diterapkan tepat sasaran, empatik, berbasis nilai/bukti.",
+      "lemah": "Teknik salah waktu/lemah: langsung diskon, memaksa, defensif, monolog fitur, mengabaikan kebutuhan."
+    }
+  },
+
+  "keberatan": {
+    "_deskripsi": "Label keberatan pada turn PELANGGAN. 6 kategori GLOBAL (dipakai untuk klasifikasi, sama di semua bidang). 'topik' per bidang adalah manifestasi konkret yang dipetakan ke salah satu kategori global — dipakai untuk menyeed variasi skenario, bukan label klasifikasi terpisah.",
+    "global": [
+      {"id": "harga", "definisi": "Merasa harga/biaya (termasuk DP, cicilan) terlalu tinggi."},
+      {"id": "bandingkan_kompetitor", "definisi": "Membandingkan dengan merk/toko/produk lain."},
+      {"id": "ragu_kualitas", "definisi": "Ragu terhadap mutu, keawetan, performa, atau nilai jangka panjang."},
+      {"id": "tidak_butuh", "definisi": "Merasa belum/tidak membutuhkan produk."},
+      {"id": "mau_pikir_pikir", "definisi": "Menunda keputusan; ingin pikir dulu / tanya pasangan."},
+      {"id": "cuma_lihat_lihat", "definisi": "Belum berniat beli, sekadar melihat-lihat."}
+    ]
+  },
+
+  "bidang": {
+    "otomotif": {
+      "nama": "Otomotif (mobil)",
+      "peran": "hero",
+      "konteks": "Showroom / dealer mobil.",
+      "produk_contoh": [
+        "LCGC 1.000cc", "MPV keluarga 7-seater", "SUV compact", "city car hatchback", "mobil bekas sertifikasi"
+      ],
+      "topik_keberatan": [
+        {"id": "boros_bbm", "map": "ragu_kualitas", "contoh_ucapan": "Mobil segini boros nggak sih bensinnya?"},
+        {"id": "dp_cicilan", "map": "harga", "contoh_ucapan": "DP-nya berat ya, cicilan per bulan berapa?"},
+        {"id": "bandingkan_merk", "map": "bandingkan_kompetitor", "contoh_ucapan": "Kalau dibanding merk sebelah kok lebih mahal?"},
+        {"id": "harga_jual_kembali", "map": "ragu_kualitas", "contoh_ucapan": "Nanti kalau dijual lagi harganya jatuh nggak?"},
+        {"id": "ruang_kabin", "map": "tidak_butuh", "contoh_ucapan": "Buat keluarga saya kayaknya kekecilan deh."},
+        {"id": "konsultasi_pasangan", "map": "mau_pikir_pikir", "contoh_ucapan": "Saya diskusi dulu sama istri ya."}
+      ]
+    },
+    "elektronik": {
+      "nama": "Elektronik & gadget",
+      "peran": "pendukung",
+      "konteks": "Toko elektronik / pramuniaga.",
+      "produk_contoh": [
+        "TV LED 43 inch", "mesin cuci front-loading", "AC 1 PK inverter", "smartphone mid-range", "kulkas 2 pintu"
+      ],
+      "topik_keberatan": [
+        {"id": "harga_toko_sebelah", "map": "bandingkan_kompetitor", "contoh_ucapan": "Di toko sebelah kok lebih murah?"},
+        {"id": "garansi", "map": "ragu_kualitas", "contoh_ucapan": "Garansinya resmi apa toko? Berapa lama?"},
+        {"id": "spek_bingung", "map": "mau_pikir_pikir", "contoh_ucapan": "Saya bingung bedanya sama yang tipe satunya."},
+        {"id": "awet", "map": "ragu_kualitas", "contoh_ucapan": "Merk ini awet nggak? Takut cepat rusak."},
+        {"id": "kemahalan", "map": "harga", "contoh_ucapan": "Wah over budget saya nih."},
+        {"id": "lihat_lihat", "map": "cuma_lihat_lihat", "contoh_ucapan": "Lihat-lihat dulu aja mas."}
+      ]
+    }
+  },
+
+  "persona": {
+    "_deskripsi": "Tipe pelanggan yang diperankan mode Pelanggan. 'emosi_awal' HANYA metadata persona, bukan tugas klasifikasi (kepala emosi dibuang dari MVP, PLAN.md §6).",
+    "label": [
+      {"id": "skeptis", "deskripsi": "Kritis, banyak membandingkan, sulit percaya klaim.", "emosi_awal": "ragu"},
+      {"id": "buru_buru", "deskripsi": "Waktu terbatas, ingin cepat & to the point.", "emosi_awal": "tidak_sabar"},
+      {"id": "sensitif_harga", "deskripsi": "Fokus ke harga/DP/cicilan, mudah menyebut budget.", "emosi_awal": "hati_hati"},
+      {"id": "banyak_tanya", "deskripsi": "Ramah tapi butuh banyak penjelasan sebelum yakin.", "emosi_awal": "penasaran"},
+      {"id": "loyal_merk_lain", "deskripsi": "Sudah condong ke merk/toko lain, perlu diyakinkan.", "emosi_awal": "defensif"},
+      {"id": "cuma_lihat", "deskripsi": "Belum berniat beli, mudah pergi jika ditekan.", "emosi_awal": "santai"}
+    ]
+  }
+}
