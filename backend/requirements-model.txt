@@ -1,0 +1,7 @@
+# Dependensi berat untuk MODE=local (diisi/diaktifkan di M3).
+# Sengaja dipisah agar image scaffold (mock mode) tetap ringan.
+# torch
+# transformers
+# peft
+# accelerate
+# bitsandbytes

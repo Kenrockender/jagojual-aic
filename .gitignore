@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node / Next
+node_modules/
+.next/
+npm-debug.log*
+
+# Model — bobot besar TIDAK di-commit langsung; adapter LoRA (kecil) boleh.
+model/checkpoints/*
+!model/checkpoints/.gitkeep
+!model/checkpoints/*.safetensors
+!model/checkpoints/adapter_config.json
+
+# OS
+.DS_Store
+Thumbs.db
