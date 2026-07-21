@@ -4,10 +4,16 @@ Berisi:
   * build_generation_messages() -> prompt untuk GENERATE dialog berlabel (dipakai
     1_generate_data.py). Ber-grounding ke framework sales nyata dan meminta output
     JSON sesuai data/dialogs/schema.json.
-  * ROLEPLAY_SYSTEM / COACH_SYSTEM -> template prompt inferensi yang nanti dipakai
-    backend (mode Pelanggan & mode Pelatih) dan saat flatten ke contoh SFT.
+  * ROLEPLAY_SYSTEM / COACH_SYSTEM / COACH_TURN_SYSTEM + helper render_* -> template
+    prompt inferensi yang dipakai backend (mode Pelanggan & mode Pelatih) DAN saat
+    flatten ke contoh SFT (2_prepare_sft.py).
 
 Semua label diambil dari taxonomy (single source of truth) agar tidak drift.
+
+PENTING: format prompt di bagian 2 adalah KONTRAK antara data latih dan inferensi.
+Backend (`backend/app/llm.py`) me-mirror fungsi-fungsi ini; kalau diubah di sini,
+ubah juga di sana — kalau tidak, model dilatih pada format yang berbeda dari yang
+dilihatnya saat demo.
 """
 from __future__ import annotations
 
@@ -87,7 +93,11 @@ Kamu HANYA membalas JSON valid sesuai skema. Tanpa teks lain, tanpa markdown fen
 - varian mutu: {cell['varian_kualitas']} -> {_VARIAN_BRIEF[cell['varian_kualitas']]}
 
 Ketentuan:
-- 8-14 turn, bergantian mulai dari 'sales' (sapaan) lalu 'pelanggan'.
+- 8-14 turn, umumnya bergantian mulai dari 'sales' (sapaan) lalu 'pelanggan'.
+- SATU giliran sales = SATU teknik. Kalau satu ucapan sebenarnya melakukan dua teknik
+  (mis. mengajak closing SEKALIGUS menawarkan aksesori), PECAH jadi dua giliran 'sales'
+  berurutan dengan label masing-masing. Label yang menggabung dua teknik membuat penilaian
+  sesi salah menyimpulkan ada teknik yang "tidak dipakai".
 - Keberatan utama di atas WAJIB muncul minimal sekali dengan label keberatan yang sesuai.
 - Setiap turn 'sales' WAJIB punya "teknik" dan "kualitas". Setiap turn 'pelanggan' WAJIB punya
   "keberatan" (isi label atau null) dan boleh "emosi".
@@ -122,10 +132,22 @@ atasi_keberatan|closing|upsell) dan kualitas (baik|lemah), lalu beri skor total 
 2-3 saran konkret. Balas HANYA JSON: \
 {{"skor_total": int, "per_teknik": [{{"teknik": str, "skor": int, "catatan": str}}], "saran": [str]}}"""
 
+COACH_TURN_SYSTEM = """Kamu PELATIH sales. Untuk SATU giliran sales, tentukan teknik \
+(sapa_rapport|gali_kebutuhan|presentasi_manfaat|atasi_keberatan|closing|upsell) dan kualitas \
+(baik|lemah). Balas HANYA JSON: {{"teknik": str, "kualitas": str}}"""
+
+_SPEAKER_LABEL = {"sales": "Sales", "pelanggan": "Pelanggan"}
+
+
+def _persona_id(persona) -> str:
+    """Terima persona sebagai id string (sel matriks) atau dict (file dialog)."""
+    return persona["tipe"] if isinstance(persona, dict) else persona
+
 
 def roleplay_system(cell_or_scenario: dict, tax: dict | None = None) -> str:
     tax = tax or load_taxonomy()
-    p = next(x for x in tax["persona"]["label"] if x["id"] == cell_or_scenario["persona"])
+    pid = _persona_id(cell_or_scenario["persona"])
+    p = next(x for x in tax["persona"]["label"] if x["id"] == pid)
     konteks = tax["bidang"][cell_or_scenario["bidang"]]["konteks"]
     return ROLEPLAY_SYSTEM.format(
         konteks=konteks,
@@ -133,4 +155,42 @@ def roleplay_system(cell_or_scenario: dict, tax: dict | None = None) -> str:
         persona_desk=p["deskripsi"],
         emosi=p["emosi_awal"],
         produk=cell_or_scenario["produk"],
+    )
+
+
+def render_transcript(turns: list[dict]) -> str:
+    """Ubah daftar turn jadi transkrip datar. Terima key 'speaker' (dialog) atau 'role' (API)."""
+    baris = []
+    for t in turns:
+        spk = t.get("speaker") or t.get("role")
+        baris.append(f"{_SPEAKER_LABEL.get(spk, spk)}: {t['text'].strip()}")
+    return "\n".join(baris)
+
+
+def _konteks_baris(scenario: dict, tax: dict) -> str:
+    bidang = tax["bidang"][scenario["bidang"]]
+    return (
+        f"Konteks: {bidang['nama']} — {bidang['konteks']} "
+        f"Produk: {scenario['produk']}. Persona pelanggan: {_persona_id(scenario['persona'])}."
+    )
+
+
+def coach_session_user(scenario: dict, turns: list[dict], tax: dict | None = None) -> str:
+    """User message mode Pelatih (penilaian SELURUH sesi) — dipakai backend /api/evaluate."""
+    tax = tax or load_taxonomy()
+    return (
+        f"{_konteks_baris(scenario, tax)}\n\n"
+        f"Percakapan:\n{render_transcript(turns)}\n\n"
+        "Nilai percakapan di atas."
+    )
+
+
+def coach_turn_user(scenario: dict, konteks_turns: list[dict], sales_text: str, tax: dict | None = None) -> str:
+    """User message mode Pelatih (label SATU giliran sales) — untuk eval F1 teknik."""
+    tax = tax or load_taxonomy()
+    sebelum = render_transcript(konteks_turns) if konteks_turns else "(awal percakapan)"
+    return (
+        f"{_konteks_baris(scenario, tax)}\n\n"
+        f"Percakapan sebelumnya:\n{sebelum}\n\n"
+        f"Giliran sales yang dinilai:\n{sales_text.strip()}"
     )

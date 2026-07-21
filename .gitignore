@@ -9,6 +9,10 @@ node_modules/
 .next/
 npm-debug.log*
 
+# Data SFT = turunan deterministik dari data/dialogs/ via 2_prepare_sft.py.
+# Tidak di-commit supaya sumber kebenaran tetap satu (dialog berlabel).
+data/sft/
+
 # Model — bobot besar TIDAK di-commit langsung; adapter LoRA (kecil) boleh.
 model/checkpoints/*
 !model/checkpoints/.gitkeep

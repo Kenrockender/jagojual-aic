@@ -40,17 +40,28 @@ data/
 │   ├── schema.json        # JSON Schema level dialog (Draft-07)
 │   ├── contoh_*.json      # 2 seed manual tervalidasi (juga smoke-test)
 │   └── <scenario_id>.json # dialog hasil generate
+├── sft/                   # TURUNAN, tidak di-commit (hasil 2_prepare_sft.py)
 └── README.md
 ```
 
-Dialog level sumber ini nanti di-*flatten* jadi contoh SFT mode Pelanggan & Pelatih oleh
-`2_prepare_sft.py` (belum dibuat). Contoh SFT mode Pelatih:
+Dialog level sumber ini di-*flatten* jadi contoh SFT oleh
+[`../model/training/2_prepare_sft.py`](../model/training/2_prepare_sft.py) menjadi format chat:
 
 ```json
-{ "instruction": "Nilai teknik jualan pada respons sales berikut.",
-  "input": "Pelanggan: '...' Sales: '...'",
-  "output": "{\"teknik\":\"atasi_keberatan\",\"kualitas\":\"baik\",\"saran\":\"...\"}" }
+{"messages": [
+  {"role": "system", "content": "Kamu PELATIH sales. ..."},
+  {"role": "user", "content": "Konteks: ...\n\nPercakapan:\nSales: ...\nPelanggan: ...\n\nNilai percakapan di atas."},
+  {"role": "assistant", "content": "{\"skor_total\": 91, \"per_teknik\": [...], \"saran\": [...]}"}
+]}
 ```
+
+Target penilaian sesi diturunkan dari label emas per-turn lewat **rubrik deterministik**
+(`model/training/rubric.py`), bukan dengan memanggil LLM kedua kali — lihat README di
+folder itu untuk rasional dan batasannya.
+
+**Aturan anotasi:** satu giliran `sales` = satu teknik. Ucapan yang sekaligus closing dan
+upsell dipecah jadi dua giliran berurutan; kalau digabung, penilaian sesi akan menyimpulkan
+salah satu teknik "tidak dipakai" padahal terlihat di transkrip.
 
 ## Cara membuat (reproduksi)
 
@@ -68,6 +79,9 @@ python 1_generate_data.py               # semua (resume: skip yang sudah ada)
 
 # 3) validasi semua file (schema + aturan bisnis)
 python 1_generate_data.py --validate-only
+
+# 4) flatten jadi contoh SFT (train/val/test + stats)
+python 2_prepare_sft.py
 ```
 
 ## Jaga mutu
