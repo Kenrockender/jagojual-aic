@@ -20,8 +20,8 @@
 | `1_generate_data.py` | Generate + validasi dialog berlabel → `data/dialogs/*.json` | ✅ siap |
 | `rubric.py` | Rubrik deterministik: label emas → target skor sesi | ✅ siap |
 | `2_prepare_sft.py` | Flatten dialog → contoh SFT, split 80/10/10 → `data/sft/*.jsonl` | ✅ siap |
-| `3_finetune_qlora.py` | QLoRA Qwen2.5, fokus mode Pelatih | ⬜ berikutnya |
-| `4_evaluate.py` | Turn-level F1 teknik + MAE skor sesi, vs base non-fine-tune | ⬜ |
+| `3_finetune_qlora.py` | QLoRA Qwen2.5, fokus mode Pelatih | ✅ siap |
+| `4_evaluate.py` | F1 teknik per-giliran + MAE skor sesi, adapter vs base | ✅ siap |
 
 ## Langkah data (sudah bisa dijalankan)
 
@@ -77,7 +77,48 @@ giliran dari satu dialog yang bocor ke dua split. `data/sft/` sengaja **tidak di
 > dan upsell harus dipecah jadi dua giliran, kalau tidak rubrik akan menyimpulkan salah satu
 > teknik "tidak dipakai" padahal terlihat di transkrip.
 
-## Fine-tune (akan dirinci di M2)
-1. Buka notebook Kaggle, aktifkan GPU + Internet.
-2. `2_prepare_sft.py` → `3_finetune_qlora.py`.
-3. Simpan adapter → push HF Hub / download → commit ke `../checkpoints/`.
+## Fine-tune & evaluasi (di Kaggle)
+
+Buka notebook Kaggle, **Settings → Accelerator → GPU** dan **Internet: On**, lalu:
+
+```bash
+pip install -r requirements-train.txt
+
+# 1) latih adapter LoRA (fokus mode Pelatih)
+python 3_finetune_qlora.py \
+    --train ../../data/sft/train.jsonl \
+    --val   ../../data/sft/val.jsonl \
+    --out   ../checkpoints
+
+# cadangan bila 7B terlalu berat/lambat di GPU demo:
+python 3_finetune_qlora.py --base-model Qwen/Qwen2.5-3B-Instruct ... 
+
+# 2) buktikan fine-tune memberi nilai tambah (angka ini masuk proposal)
+python 4_evaluate.py --test ../../data/sft/test.jsonl \
+                     --adapter ../checkpoints --mode both \
+                     --out ../checkpoints/eval.json
+```
+
+Pilihan hyperparameter (default): QLoRA 4-bit NF4 + double-quant, LoRA `r=16 alpha=32
+dropout=0.05` pada seluruh proyeksi attention + MLP Qwen2, `lr=2e-4` cosine, 3 epoch,
+efektif batch 8 (batch 1 × grad-accum 8), `paged_adamw_8bit`, gradient checkpointing.
+bf16/fp16 dipilih otomatis (T4 Kaggle tidak mendukung bf16). `--save-steps 100` supaya
+sesi Kaggle yang mati tidak menghanguskan seluruh training.
+
+`3_finetune_qlora.py` menulis `training_meta.json` di folder adapter — hyperparameter &
+statistik data yang menghasilkan adapter itu, supaya hasil bisa ditelusuri.
+
+**Metrik `4_evaluate.py`** (dihitung di `test.jsonl`, dialog yang tak pernah dilihat saat latih):
+
+| Metrik | Arti |
+|---|---|
+| Akurasi & macro-F1 teknik | Ketepatan melabeli teknik per giliran. Macro-F1 dipakai karena distribusi teknik tidak rata. |
+| Akurasi kualitas | Ketepatan membedakan giliran `baik` vs `lemah`. |
+| JSON valid sesi (%) | Berapa persen keluaran bisa di-parse jadi `EvaluateResponse` — syarat kepakaian di backend. |
+| MAE skor_total & per-teknik | Selisih rata-rata skor model vs rubrik emas. |
+
+Prediksi yang gagal di-parse **dihitung salah**, bukan dibuang — kalau dibuang, model yang
+sering ngawur justru terlihat unggul. Dekoding greedy supaya angkanya bisa direproduksi.
+
+Terakhir: simpan adapter → push HF Hub / download → commit ke `../checkpoints/`
+(`.gitignore` sudah mengizinkan `*.safetensors` + `adapter_config.json` di folder itu).

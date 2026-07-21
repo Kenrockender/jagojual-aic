@@ -1,0 +1,10 @@
+# Dependensi fine-tuning OFFLINE (Kaggle). TIDAK dipakai backend saat demo —
+# lihat backend/requirements-model.txt untuk sisi inferensi.
+# torch sudah tersedia di image Kaggle; jangan dipasang ulang agar tidak bentrok CUDA.
+transformers>=4.44
+trl>=0.12
+peft>=0.13
+bitsandbytes>=0.43
+accelerate>=0.34
+datasets>=2.20
+jsonschema>=4.0   # validasi dialog di 1_generate_data.py
