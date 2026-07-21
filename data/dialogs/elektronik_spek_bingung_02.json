@@ -1,0 +1,117 @@
+{
+  "scenario_id": "elektronik_spek_bingung_02",
+  "bidang": "elektronik",
+  "produk": "mesin cuci front-loading",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mari, Mbak, silakan masuk. Kebetulan pas banget, boleh saya temani lihat-lihat mesin cuci front-loading-nya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh mesin cuci front-loading nih, buat usaha laundry kecil.",
+      "keberatan": null,
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang penting beli dulu, nanti juga terbiasa sendiri.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, betul.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh tahu biasanya dipakai untuk apa? Dan kira-kira sehari seberapa sering?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Dibanding pilihan lain, nilai lebih mesin cuci front-loading ada di sini: motornya inverter, jadi lebih senyap dan bergaransi sampai 10 tahun.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini beda apa sih sama yang sebelahnya?",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya mengerti maksud Bapak/Ibu. Izinkan saya luruskan: tidak usah pusing dengan angka-angkanya, saya terjemahkan ke manfaat sehari-hari saja.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Harganya masih di atas rencana saya nih.",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Betul, Mbak, wajar kalau ragu. Tapi begini: bisa dicicil ringan atau ada tipe yang lebih ramah budget dengan fungsi mirip. Gimana, sudah lebih jelas?",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Gimana kalau kita lanjut ke proses administrasi sekarang? Biar Bapak/Ibu makin mantap.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya lebih tenang pemakaiannya, stacking kit + tutup pelindung bisa saya bundling dengan harga lebih baik. Mau?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

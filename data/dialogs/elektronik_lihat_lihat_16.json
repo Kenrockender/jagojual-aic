@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_lihat_lihat_16",
+  "bidang": "elektronik",
+  "produk": "TV LED 43 inch",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mari, Bu, silakan masuk. Kebetulan pas banget, boleh saya temani lihat-lihat TV LED 43 inch-nya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh TV LED 43 inch nih, buat ruang keluarga ukuran sedang.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekarang lagi pakai yang seperti apa? Ada yang kurang sreg dari yang sekarang, biar saya carikan solusinya?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, betul.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Dibanding pilihan lain, nilai lebih TV LED 43 inch ada di sini: bezel-nya tipis jadi layar terasa lebih luas untuk ukuran 43 inch.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Belum mau beli sih, cuma lihat-lihat.",
+      "keberatan": "cuma_lihat_lihat",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Betul, Bu, wajar kalau ragu. Tapi begini: santai saja, saya temani sebentar biar kalau nanti butuh, Bapak/Ibu sudah punya bayangan. Gimana, sudah lebih jelas?",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Unitnya kebetulan masih ready. Mau saya amankan dulu untuk Bapak/Ibu?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, kalau harganya segitu saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Satu lagi yang biasanya berguna: stabilizer pelindung tegangan. Sifatnya opsional, tapi sayang kalau nanti nyari terpisah.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

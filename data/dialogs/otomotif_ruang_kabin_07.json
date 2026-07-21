@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_ruang_kabin_07",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau yang mana? Semua bagus kok, tinggal pilih aja.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir MPV keluarga 7-seater nih. Kabinnya sempit kelihatannya dari luar.",
+      "keberatan": "tidak_butuh",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nggak usah banyak mikir, MPV keluarga 7-seater ini semua orang cocok kok.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: ground clearance-nya tinggi, aman lewat jalan rusak dan genangan saat hujan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pertanyaan yang bagus, Kak. Justru di situ bedanya: kalau kebutuhannya angkut barang besar sesekali, baris ketiga tinggal dilipat rata.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, beda juga ya ternyata.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau tidak ada yang mengganjal lagi, boleh saya bantu lanjutkan ke test drive, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya mau yang ini.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar makin lengkap, banyak pelanggan menambahkan extended warranty mesin 5 tahun. Mau saya siapkan sekalian?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

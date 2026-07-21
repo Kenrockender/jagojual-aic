@@ -1,0 +1,81 @@
+{
+  "scenario_id": "elektronik_harga_toko_sebelah_15",
+  "bidang": "elektronik",
+  "produk": "kulkas 2 pintu",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Kak. Silakan, ada yang bisa saya bantu? Lagi cari yang seperti apa nih?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya tertarik sama kulkas 2 pintu ini, kebetulan lagi perlu untuk upgrade dari kulkas 1 pintu.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nggak usah banyak mikir, kulkas 2 pintu ini semua orang cocok kok.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Nah itu yang saya mau tahu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: rak kacanya kuat menahan beban dan ada laci sayur khusus biar sayur tetap segar.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Selisihnya lumayan lho sama yang di ujung.",
+      "keberatan": "bandingkan_kompetitor",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Jangan ragu Kak, pokoknya bagus. Ambil aja dulu deh.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau ini cocok, saya bisa langsung siapkan untuk hari ini juga, Kak. Mau saya proseskan?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

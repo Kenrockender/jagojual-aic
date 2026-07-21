@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_boros_bbm_11",
+  "bidang": "otomotif",
+  "produk": "LCGC 1.000cc",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Iya Mas mau yang mana? Langsung saya buatkan nota ya biar cepat.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya tertarik sama LCGC 1.000cc ini, kebetulan lagi perlu untuk harian ke kantor.",
+      "keberatan": null,
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Rencananya dipakai berapa orang biasanya? Dan lebih sering dalam kota atau jarak jauh?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Paham-paham.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Fiturnya banyak banget, ada ini itu, semua ada di LCGC 1.000cc ini. Percaya deh.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Wah CC segini pasti minum bensin ya?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pertanyaan yang bagus, Mas. Justru di situ bedanya: itu bukan angka brosur, melainkan catatan konsumsi pelanggan kami yang rutenya mirip Bapak/Ibu.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus test drive-nya ya, Mas?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar makin lengkap, banyak pelanggan menambahkan aksesori pelindung bodi. Mau saya siapkan sekalian?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

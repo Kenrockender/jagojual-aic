@@ -1,0 +1,99 @@
+{
+  "scenario_id": "elektronik_awet_19",
+  "bidang": "elektronik",
+  "produk": "smartphone mid-range",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Cari smartphone mid-range ya? Yang ini aja langsung, bagus kok, nggak usah mikir lama.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat smartphone mid-range nih. Merk ini awet nggak? Takut cepat rusak.",
+      "keberatan": "ragu_kualitas",
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang penting beli dulu, nanti juga terbiasa sendiri.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh dijelaskan lebih detail?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang penting beli dulu, nanti juga terbiasa sendiri.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh iya? Terus kalau soal itu gimana?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ini teknologinya terbaru, canggih, pokoknya nomor satu di kelasnya.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya sudah kalau begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Masa tidak percaya sama saya? Ini barang bagus lho.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Mbak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar makin lengkap, banyak pelanggan menambahkan earbuds nirkabel dengan harga bundling. Mau saya siapkan sekalian?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

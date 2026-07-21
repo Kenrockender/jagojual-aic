@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_harga_jual_kembali_09",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Bu. Silakan, ada yang bisa saya bantu? Lagi cari yang seperti apa nih?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari city car hatchback buat mobilitas dalam kota yang padat.",
+      "keberatan": null,
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekarang lagi pakai yang seperti apa? Ada yang kurang sreg dari yang sekarang, biar saya carikan solusinya?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, oke.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: bobotnya ringan jadi tarikannya responsif dan asyik di jalanan kota.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Depresiasinya gede nggak ya mobil ini?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Bu. Nah, kami juga punya program buyback yang bisa jadi acuan harga wajarnya nanti, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar pas, Bapak/Ibu lebih nyaman ambil yang ini atau yang tadi satunya? Saya siapkan yang dipilih.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, saya pikirkan serius nih jadinya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan kaca film anti-panas merek ternama? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

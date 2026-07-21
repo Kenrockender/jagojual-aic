@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_kemahalan_07",
+  "bidang": "elektronik",
+  "produk": "mesin cuci front-loading",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Bu, terima kasih sudah mampir. Ada model tertentu yang sudah diincar atau mau saya bantu carikan?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat mesin cuci front-loading nih. Ada yang lebih murah nggak? Ini di luar budget.",
+      "keberatan": "harga",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh tahu biasanya dipakai untuk apa? Dan kira-kira sehari seberapa sering?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, betul.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nah untuk kebutuhan tadi, mesin cuci front-loading ini pas: front-loading lebih hemat air dan deterjen, hasil cuciannya bersih dan lebih awet. Jadi langsung menjawab yang Bapak/Ibu butuhkan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Wajar banget dipikirkan. Kenyataannya, saya carikan yang sesuai kantong dulu, yang penting kebutuhan utamanya tetap terpenuhi, dan itu bisa Bapak/Ibu buktikan sendiri.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau ini cocok, saya bisa langsung siapkan untuk hari ini juga, Bu. Mau saya proseskan?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Baik, saya sepakat.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya lebih tenang pemakaiannya, stacking kit + tutup pelindung bisa saya bundling dengan harga lebih baik. Mau?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

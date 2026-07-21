@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_ruang_kabin_13",
+  "bidang": "otomotif",
+  "produk": "SUV compact",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang. Lagi cari SUV compact nih, Kak? Biar tidak salah pilih, saya bantu sesuaikan dengan kebutuhannya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh SUV compact nih, buat kerja lapangan.",
+      "keberatan": null,
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pokoknya SUV compact ini paling laku, langsung ambil aja deh.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk lain sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: bagasinya luas dan bisa diperluas, praktis untuk barang touring atau belanja bulanan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Buat keluarga saya kayaknya kekecilan deh.",
+      "keberatan": "tidak_butuh",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Kak. Nah, kalau kebutuhannya angkut barang besar sesekali, baris ketiga tinggal dilipat rata, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau ini cocok, saya bisa langsung siapkan untuk hari ini juga, Kak. Mau saya proseskan?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau begitu saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya lebih tenang pemakaiannya, paket pelindung cat + servis gratis 1 tahun bisa saya bundling dengan harga lebih baik. Mau?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

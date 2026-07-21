@@ -1,0 +1,81 @@
+{
+  "scenario_id": "otomotif_boros_bbm_22",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo Mas, apa kabar? Silakan, kalau ada yang menarik nanti saya jelaskan detailnya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari MPV keluarga 7-seater buat keluarga dengan tiga anak.",
+      "keberatan": null,
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang penting beli dulu, nanti juga terbiasa sendiri.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ya bagus lah, kan mahal. Ada garansi, ada bonus, komplit.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Jujur, saya paling takut soal konsumsi bensinnya.",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Mas. Nah, nanti pas test drive kita nyalakan indikator konsumsi real-time, jadi Bapak/Ibu lihat sendiri angkanya, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus test drive-nya ya, Mas?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau begitu saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_konsultasi_pasangan_10",
+  "bidang": "otomotif",
+  "produk": "mobil bekas sertifikasi",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau beli apa? Ini mobil bekas sertifikasi-nya lagi promo, ambil aja mumpung murah.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari mobil bekas sertifikasi buat pembeli pertama yang hati-hati.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Mau yang murah atau yang mahal? Sudah itu saja.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, terus?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ini teknologinya terbaru, canggih, pokoknya nomor satu di kelasnya.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Mau mikir-mikir dan omongin dulu di rumah.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Masa tidak percaya sama saya? Ini barang bagus lho.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ayo dong Mbak ambil sekarang, nanti kehabisan lho, buruan.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, kalau harganya segitu saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ambil perpanjangan garansi mesin jadi 2 tahun sekalian lah, masa cuma beli itu doang.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

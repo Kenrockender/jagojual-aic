@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_harga_jual_kembali_22",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "skeptis",
+    "emosi_awal": "ragu"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo Pak, apa kabar? Silakan, kalau ada yang menarik nanti saya jelaskan detailnya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat MPV keluarga 7-seater nih. Nanti kalau dijual lagi harganya jatuh nggak?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh tahu biasanya dipakai untuk apa? Dan kira-kira sehari seberapa sering?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yakin nih?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau begitu ini cocok. Konsumsi bbm-nya masih wajar untuk ukuran mobil sebesar ini, sekitar 11-12 km/liter. Artinya sehari-hari pemakaiannya lebih tenang.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke... tapi saya masih agak ragu sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya paham kekhawatiran Bapak/Ibu. Banyak pelanggan awalnya berpikir sama, sampai tahu bahwa riwayat servis yang tercatat rapi itu yang bikin harga jualnya tidak anjlok.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah coba lihat dulu deh buktinya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Gimana kalau kita lanjut ke test drive sekarang? Biar Bapak/Ibu makin mantap.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Beli extended warranty mesin 5 tahun juga dong, mumpung di sini, nambah sedikit doang kok.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "scenario_id": "otomotif_ruang_kabin_14",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Mbak. Perkenalkan saya Wulan. Boleh tahu ini untuk dipakai sendiri atau untuk keluarga?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir city car hatchback nih. Anak saya tiga, cukup nggak ruang belakangnya?",
+      "keberatan": "tidak_butuh",
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Mau yang murah atau yang mahal? Sudah itu saja.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Nah itu yang saya mau tahu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: konsumsi BBM-nya efisien 16-18 km/liter, ringan untuk pemakaian harian.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya jadi lebih ngerti.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Wajar banget dipikirkan. Kenyataannya, kalau kebutuhannya angkut barang besar sesekali, baris ketiga tinggal dilipat rata, dan itu bisa Bapak/Ibu buktikan sendiri.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya jadi lebih ngerti.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Jadi beli tidak nih? Saya tunggu dari tadi soalnya.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Menarik juga, boleh saya pertimbangkan dengan serius.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

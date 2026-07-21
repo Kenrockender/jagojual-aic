@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_spek_bingung_23",
+  "bidang": "elektronik",
+  "produk": "AC 1 PK inverter",
+  "persona": {
+    "tipe": "skeptis",
+    "emosi_awal": "ragu"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau beli apa? Ini AC 1 PK inverter-nya lagi promo, ambil aja mumpung murah.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh AC 1 PK inverter nih, buat kamar tidur ukuran 3x4 meter.",
+      "keberatan": null,
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nggak usah banyak mikir, AC 1 PK inverter ini semua orang cocok kok.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Fiturnya banyak banget, ada ini itu, semua ada di AC 1 PK inverter ini. Percaya deh.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Istilah-istilahnya asing buat saya.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ah itu mah tidak usah dipikirin, semua produk juga begitu kok.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah coba lihat dulu deh buktinya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Mumpung saya baik nih Kak, ambil sekarang ya, jangan ditunda-tunda.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau begitu saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau berkenan, paket pasang + bracket + pipa berkualitas ini pas dengan kebutuhan Bapak/Ibu tadi, bikin lebih worth it. Saya masukkan ya?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

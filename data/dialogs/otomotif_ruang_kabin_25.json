@@ -1,0 +1,105 @@
+{
+  "scenario_id": "otomotif_ruang_kabin_25",
+  "bidang": "otomotif",
+  "produk": "mobil bekas sertifikasi",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Cari mobil bekas sertifikasi ya? Yang ini aja langsung, bagus kok, nggak usah mikir lama.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Kebetulan lagi cari mobil bekas sertifikasi nih. Kalau bawa barang banyak, bagasinya mepet nggak?",
+      "keberatan": "tidak_butuh",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya rekomendasinya tepat, boleh saya tahu apa yang bikin Bapak/Ibu tertarik ke mobil bekas sertifikasi ini?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke saya dengerin.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ini mobil bekas sertifikasi paling canggih, fiturnya dari A sampai Z ada, semua orang suka, bagus deh pokoknya.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau soal itu sih relatif ya, tergantung orangnya. Yang penting ambil dulu.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Harganya masih di atas rencana saya nih.",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Wajar banget dipikirkan. Kenyataannya, bisa dicicil ringan atau ada tipe yang lebih ramah budget dengan fungsi mirip, dan itu bisa Bapak/Ibu buktikan sendiri.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Gimana kalau kita lanjut ke proses administrasi sekarang? Biar Bapak/Ibu makin mantap.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Baik, saya sepakat.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau berkenan, asuransi TLO setahun ini pas dengan kebutuhan Bapak/Ibu tadi, bikin lebih worth it. Saya masukkan ya?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

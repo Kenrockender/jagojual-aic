@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_awet_21",
+  "bidang": "elektronik",
+  "produk": "TV LED 43 inch",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mari, Bu, silakan masuk. Kebetulan pas banget, boleh saya temani lihat-lihat TV LED 43 inch-nya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir TV LED 43 inch nih. Merk ini awet nggak? Takut cepat rusak.",
+      "keberatan": "ragu_kualitas",
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang penting beli dulu, nanti juga terbiasa sendiri.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, terus?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nah untuk kebutuhan tadi, TV LED 43 inch ini pas: sudah bergaransi resmi panel 2 tahun, bukan sekadar garansi toko. Jadi langsung menjawab yang Bapak/Ibu butuhkan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya mengerti maksud Bapak/Ibu. Izinkan saya luruskan: kalau dirawat sesuai anjuran, usianya bisa jauh lebih panjang dari garansinya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya jadi lebih ngerti.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Unitnya kebetulan masih ready. Mau saya amankan dulu untuk Bapak/Ibu?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah deh, boleh lihat lebih lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan stabilizer pelindung tegangan? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

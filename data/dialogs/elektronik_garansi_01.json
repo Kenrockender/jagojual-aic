@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_garansi_01",
+  "bidang": "elektronik",
+  "produk": "TV LED 43 inch",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Beli sekarang Mbak? Lagi diskon nih, sayang kalau kelewat.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Langsung aja ya, saya cari TV LED 43 inch buat nonton bola dan film akhir pekan, yang bagus yang mana?",
+      "keberatan": null,
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nggak usah banyak mikir, TV LED 43 inch ini semua orang cocok kok.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ini TV LED 43 inch paling canggih, fiturnya dari A sampai Z ada, semua orang suka, bagus deh pokoknya.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sparepart-nya dijamin ada nggak kalau perlu ganti?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Mbak? Ini garansi resmi pabrik, klaimnya di service center resmi bukan di toko yang bisa tutup sewaktu-waktu. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya udah, intinya oke lah.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kapan lagi ada harga segini? Pokoknya harus ambil hari ini.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah gas, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya lebih tenang pemakaiannya, bracket dinding + pemasangan rapi bisa saya bundling dengan harga lebih baik. Mau?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

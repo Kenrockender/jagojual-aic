@@ -1,0 +1,81 @@
+{
+  "scenario_id": "otomotif_boros_bbm_02",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau yang mana? Semua bagus kok, tinggal pilih aja.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat MPV keluarga 7-seater nih. Mobil segini boros nggak sih bensinnya?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang penting beli dulu, nanti juga terbiasa sendiri.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke saya dengerin.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Fiturnya banyak banget, ada ini itu, semua ada di MPV keluarga 7-seater ini. Percaya deh.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke oke, paham. Lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Bu? Itu bukan angka brosur, melainkan catatan konsumsi pelanggan kami yang rutenya mirip bapak/ibu. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke oke, paham. Lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Bu?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah gas, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

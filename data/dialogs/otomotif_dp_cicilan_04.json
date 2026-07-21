@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_dp_cicilan_04",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang, Kak. Saya Nadia, siap bantu. Lagi cari-cari city car hatchback ya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya tertarik sama city car hatchback ini, kebetulan lagi perlu untuk mobilitas dalam kota yang padat.",
+      "keberatan": null,
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh tahu biasanya dipakai untuk apa? Dan kira-kira sehari seberapa sering?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Nah itu yang saya mau tahu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: biaya perawatannya murah dan nilai jualnya tetap diminati anak muda.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Wah DP-nya kayaknya kemahalan buat saya.",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Kak? Ada promo bunga rendah bulan ini yang membuat total cicilannya jauh lebih ramah. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Baik, saya sepakat.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau berkenan, kaca film anti-panas merek ternama ini pas dengan kebutuhan Bapak/Ibu tadi, bikin lebih worth it. Saya masukkan ya?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

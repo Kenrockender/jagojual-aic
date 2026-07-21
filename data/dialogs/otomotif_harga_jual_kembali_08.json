@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_harga_jual_kembali_08",
+  "bidang": "otomotif",
+  "produk": "SUV compact",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Bu. Perkenalkan saya Rina. Boleh tahu ini untuk dipakai sendiri atau untuk keluarga?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat SUV compact nih. Ini termasuk yang cepat turun harganya nggak?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekarang lagi pakai yang seperti apa? Ada yang kurang sreg dari yang sekarang, biar saya carikan solusinya?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya kira-kira begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ya bagus lah, kan mahal. Ada garansi, ada bonus, komplit.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, beda juga ya ternyata.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pertanyaan yang bagus, Bu. Justru di situ bedanya: asal servis rutin di bengkel resmi, nilai jualnya terjaga dan gampang laku lagi.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Gimana kalau kita lanjut ke simulasi cicilan sekarang? Biar Bapak/Ibu makin mantap.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau berkenan, ban serep berkualitas + tools ini pas dengan kebutuhan Bapak/Ibu tadi, bikin lebih worth it. Saya masukkan ya?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

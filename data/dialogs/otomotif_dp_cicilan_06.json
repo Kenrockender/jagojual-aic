@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_dp_cicilan_06",
+  "bidang": "otomotif",
+  "produk": "LCGC 1.000cc",
+  "persona": {
+    "tipe": "skeptis",
+    "emosi_awal": "ragu"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo, Bu, silakan dilihat-lihat dulu. Kalau boleh tahu, ini untuk antar-jemput anak sekolah atau ada kebutuhan lain?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari LCGC 1.000cc buat antar-jemput anak sekolah.",
+      "keberatan": null,
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh tahu biasanya dipakai untuk apa? Dan kira-kira sehari seberapa sering?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yakin nih?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Dibanding pilihan lain, nilai lebih LCGC 1.000cc ada di sini: pajak tahunannya rendah dan sparepart-nya murah serta gampang dicari di mana-mana.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Bunga cicilannya gede nggak nih totalnya?",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Bu? Ada promo bunga rendah bulan ini yang membuat total cicilannya jauh lebih ramah. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke... tapi saya masih agak ragu sih.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Gimana kalau kita lanjut ke jadwal antar sekarang? Biar Bapak/Ibu makin mantap.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau begitu saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Beli cicilan asuransi all-risk tahun pertama juga dong, mumpung di sini, nambah sedikit doang kok.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

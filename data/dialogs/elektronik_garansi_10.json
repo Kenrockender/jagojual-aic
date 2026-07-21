@@ -1,0 +1,81 @@
+{
+  "scenario_id": "elektronik_garansi_10",
+  "bidang": "elektronik",
+  "produk": "kulkas 2 pintu",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mari, Kak, silakan masuk. Kebetulan pas banget, boleh saya temani lihat-lihat kulkas 2 pintu-nya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Kebetulan lagi cari kulkas 2 pintu nih. Sparepart-nya dijamin ada nggak kalau perlu ganti?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Mau yang murah atau yang mahal? Sudah itu saja.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk lain sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau begitu ini cocok. Rak kacanya kuat menahan beban dan ada laci sayur khusus biar sayur tetap segar. Artinya sehari-hari pemakaiannya lebih tenang.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Jangan ragu Kak, pokoknya bagus. Ambil aja dulu deh.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus proses administrasi-nya ya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

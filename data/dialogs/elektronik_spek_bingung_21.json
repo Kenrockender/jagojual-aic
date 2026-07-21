@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_spek_bingung_21",
+  "bidang": "elektronik",
+  "produk": "TV LED 43 inch",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau beli apa? Ini TV LED 43 inch-nya lagi promo, ambil aja mumpung murah.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir TV LED 43 inch nih. Saya bingung bedanya sama yang tipe satunya.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ngapain ditanya-tanya, TV LED 43 inch ini yang paling bagus, percaya saya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ya bagus lah, kan mahal. Ada garansi, ada bonus, komplit.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, mulai kepikiran juga sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Percaya saja sama saya, dijamin tidak nyesel, sudah banyak yang beli.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, beda juga ya ternyata.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ayo dong Kak ambil sekarang, nanti kehabisan lho, buruan.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Beli bracket dinding + pemasangan rapi juga dong, mumpung di sini, nambah sedikit doang kok.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

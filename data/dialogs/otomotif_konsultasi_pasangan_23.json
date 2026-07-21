@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_konsultasi_pasangan_23",
+  "bidang": "otomotif",
+  "produk": "SUV compact",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo, Kak, silakan dilihat-lihat dulu. Kalau boleh tahu, ini untuk gaya harian tapi sesekali luar kota atau ada kebutuhan lain?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir SUV compact nih. Mau mikir-mikir dan omongin dulu di rumah.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya rekomendasinya tepat, boleh saya tahu apa yang bikin Bapak/Ibu tertarik ke SUV compact ini?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang bikin SUV compact ini menonjol, fitur keselamatannya lengkap: 6 airbag, rem ABS, dan kontrol stabilitas, dan itu yang paling terasa manfaatnya di pemakaian harian.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya sudah kalau begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Betul, Kak, wajar kalau ragu. Tapi begini: kalau berkenan saya bantu jadwalkan test drive bareng pasangan supaya bisa dicoba berdua. Gimana, sudah lebih jelas?",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Gimana kalau kita lanjut ke test drive sekarang? Biar Bapak/Ibu makin mantap.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau begitu saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Satu lagi yang biasanya berguna: ban serep berkualitas + tools. Sifatnya opsional, tapi sayang kalau nanti nyari terpisah.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

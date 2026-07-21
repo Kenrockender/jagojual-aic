@@ -1,0 +1,99 @@
+{
+  "scenario_id": "elektronik_spek_bingung_08",
+  "bidang": "elektronik",
+  "produk": "AC 1 PK inverter",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Mbak. Silakan, ada yang bisa saya bantu? Lagi cari yang seperti apa nih?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari AC 1 PK inverter buat ruang kerja di rumah.",
+      "keberatan": null,
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekarang lagi pakai yang seperti apa? Ada yang kurang sreg dari yang sekarang, biar saya carikan solusinya?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Paham-paham.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Rencananya dipakai berapa orang biasanya? Dan lebih sering dalam kota atau jarak jauh?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang bikin AC 1 PK inverter ini menonjol, sudah dilengkapi mode hemat malam yang otomatis menyesuaikan suhu, dan itu yang paling terasa manfaatnya di pemakaian harian.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Speknya banyak, saya nggak ngerti mana yang cocok.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Wajar banget dipikirkan. Kenyataannya, intinya bedanya cuma di dua hal yang berpengaruh ke pemakaian Bapak/Ibu, sisanya sama saja, dan itu bisa Bapak/Ibu buktikan sendiri.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ayo dong Mbak ambil sekarang, nanti kehabisan lho, buruan.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ambil remote pintar kendali dari HP sekalian lah, masa cuma beli itu doang.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

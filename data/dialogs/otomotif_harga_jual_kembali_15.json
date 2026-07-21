@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_harga_jual_kembali_15",
+  "bidang": "otomotif",
+  "produk": "mobil bekas sertifikasi",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Mas. Perkenalkan saya Adit. Boleh tahu ini untuk dipakai sendiri atau untuk keluarga?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini lagi lihat-lihat mobil bekas sertifikasi yang cocok untuk tambahan armada usaha.",
+      "keberatan": null,
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ngapain ditanya-tanya, mobil bekas sertifikasi ini yang paling bagus, percaya saya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Paham-paham.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: unit sudah lolos inspeksi 150 titik dan bergaransi mesin 1 tahun dari kami.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Depresiasinya gede nggak ya mobil ini?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Betul, Mas, wajar kalau ragu. Tapi begini: kami juga punya program buyback yang bisa jadi acuan harga wajarnya nanti. Gimana, sudah lebih jelas?",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm boleh juga.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau ini cocok, saya bisa langsung siapkan untuk hari ini juga, Mas. Mau saya proseskan?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Menarik juga, boleh saya pertimbangkan dengan serius.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Tambahin paket detailing + ganti oli menyeluruh juga ya, biar tokonya untung sedikit.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

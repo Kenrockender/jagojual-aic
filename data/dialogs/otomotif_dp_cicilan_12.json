@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_dp_cicilan_12",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "skeptis",
+    "emosi_awal": "ragu"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo Kak, apa kabar? Silakan, kalau ada yang menarik nanti saya jelaskan detailnya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir MPV keluarga 7-seater nih. DP-nya berat ya, cicilan per bulan berapa?",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ngapain ditanya-tanya, MPV keluarga 7-seater ini yang paling bagus, percaya saya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang bikin MPV keluarga 7-seater ini menonjol, kabin 3 baris benar-benar muat 7 orang dan bagasinya masih lega untuk koper, dan itu yang paling terasa manfaatnya di pemakaian harian.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Kedengarannya bagus, tapi harus saya cek.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Percaya saja sama saya, dijamin tidak nyesel, sudah banyak yang beli.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, tapi beneran ya?",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, kita lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan extended warranty mesin 5 tahun? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

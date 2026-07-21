@@ -1,0 +1,81 @@
+{
+  "scenario_id": "otomotif_konsultasi_pasangan_16",
+  "bidang": "otomotif",
+  "produk": "LCGC 1.000cc",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Pak. Perkenalkan saya Yoga. Boleh tahu ini untuk dipakai sendiri atau untuk keluarga?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini lagi lihat-lihat LCGC 1.000cc yang cocok untuk usaha online kecil-kecilan.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Rencananya dipakai berapa orang biasanya? Dan lebih sering dalam kota atau jarak jauh?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, oke.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Dibanding pilihan lain, nilai lebih LCGC 1.000cc ada di sini: pajak tahunannya rendah dan sparepart-nya murah serta gampang dicari di mana-mana.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini keputusan besar, saya nggak bisa mutusin sendiri.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Pak? Wajar kok, keputusan begini memang enaknya dibicarakan; saya kirimkan detailnya lewat whatsapp ya. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar pas, Bapak/Ibu lebih nyaman ambil yang ini atau yang tadi satunya? Saya siapkan yang dipilih.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_awet_02",
+  "bidang": "elektronik",
+  "produk": "mesin cuci front-loading",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Mbak. Perkenalkan saya Adit. Boleh tahu ini untuk dipakai sendiri atau untuk keluarga?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh mesin cuci front-loading nih, buat keluarga dengan cucian menumpuk.",
+      "keberatan": null,
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya rekomendasinya tepat, boleh saya tahu apa yang bikin Bapak/Ibu tertarik ke mesin cuci front-loading ini?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya kira-kira begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: putaran pengeringnya kencang, jemuran jadi cepat kering meski mendung.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Merk ini awet nggak? Takut cepat rusak.",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya paham kekhawatiran Bapak/Ibu. Banyak pelanggan awalnya berpikir sama, sampai tahu bahwa asal pemakaian normal, rata-rata pelanggan kami memakainya bertahun-tahun tanpa keluhan.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Mbak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ambil layanan antar-pasang dan uji coba gratis sekalian lah, masa cuma beli itu doang.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

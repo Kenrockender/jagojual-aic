@@ -1,0 +1,99 @@
+{
+  "scenario_id": "otomotif_konsultasi_pasangan_05",
+  "bidang": "otomotif",
+  "produk": "mobil bekas sertifikasi",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "mobil bekas sertifikasi? Ada tuh di sana, lihat sendiri aja dulu ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh mobil bekas sertifikasi nih, buat pembeli pertama yang hati-hati.",
+      "keberatan": null,
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh cerita sedikit kebiasaan pemakaiannya? Dari situ saya bisa bantu pilihkan yang tidak mubazir.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh cerita sedikit kebiasaan pemakaiannya? Dari situ saya bisa bantu pilihkan yang tidak mubazir.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: surat-suratnya lengkap dan sudah kami bantu cek keasliannya, jadi aman.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya pulang dulu, bahas sama keluarga.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya paham kekhawatiran Bapak/Ibu. Banyak pelanggan awalnya berpikir sama, sampai tahu bahwa wajar kok, keputusan begini memang enaknya dibicarakan; saya kirimkan detailnya lewat WhatsApp ya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm boleh juga.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Mbak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya lebih tenang pemakaiannya, paket detailing + ganti oli menyeluruh bisa saya bundling dengan harga lebih baik. Mau?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

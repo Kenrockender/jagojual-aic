@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_spek_bingung_09",
+  "bidang": "elektronik",
+  "produk": "smartphone mid-range",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Mbak. Silakan, ada yang bisa saya bantu? Lagi cari yang seperti apa nih?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini lagi lihat-lihat smartphone mid-range yang cocok untuk anak sekolah untuk belajar online.",
+      "keberatan": null,
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kira-kira budget yang nyaman di kisaran berapa ya? Biar saya tunjukkan yang benar-benar pas, tidak kejauhan.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk lain sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: kameranya sudah ada OIS jadi hasil foto malam tetap tajam tidak gampang blur.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya bingung bedanya sama yang tipe satunya.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pertanyaan yang bagus, Mbak. Justru di situ bedanya: intinya bedanya cuma di dua hal yang berpengaruh ke pemakaian Bapak/Ibu, sisanya sama saja.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau ini cocok, saya bisa langsung siapkan untuk hari ini juga, Mbak. Mau saya proseskan?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, kita lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Satu lagi yang biasanya berguna: earbuds nirkabel dengan harga bundling. Sifatnya opsional, tapi sayang kalau nanti nyari terpisah.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "scenario_id": "elektronik_spek_bingung_25",
+  "bidang": "elektronik",
+  "produk": "kulkas 2 pintu",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Bu, terima kasih sudah mampir. Ada model tertentu yang sudah diincar atau mau saya bantu carikan?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat kulkas 2 pintu nih. Saya bingung bedanya sama yang tipe satunya.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ada pengalaman kurang enak dengan produk sebelumnya? Biar yang ini benar-benar menjawab kebutuhannya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, terus?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: freezer-nya terpisah dan tidak menumpuk bunga es karena sudah no-frost.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Bu. Nah, kalau tujuannya seperti yang tadi, tipe ini yang paling masuk akal, yang lain justru mubazir, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar pas, Bapak/Ibu lebih nyaman ambil yang ini atau yang tadi satunya? Saya siapkan yang dipilih.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

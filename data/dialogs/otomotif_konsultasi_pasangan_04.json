@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_konsultasi_pasangan_04",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang, Kak. Lagi cari city car hatchback untuk keperluan apa? Biar saya bantu carikan yang pas.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini lagi lihat-lihat city car hatchback yang cocok untuk mobil kedua di rumah.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sebelum saya sarankan, boleh saya tanya kebutuhannya dulu? Ini lebih ke mobil kedua di rumah, atau ada prioritas lain?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: biaya perawatannya murah dan nilai jualnya tetap diminati anak muda.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Mau mikir-mikir dan omongin dulu di rumah.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya mengerti maksud Bapak/Ibu. Izinkan saya luruskan: supaya diskusinya lebih gampang, saya catatkan poin-poin pentingnya biar tidak lupa.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm boleh juga.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus cek unit ready-nya ya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau berkenan, spoiler + velg ringan ini pas dengan kebutuhan Bapak/Ibu tadi, bikin lebih worth it. Saya masukkan ya?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

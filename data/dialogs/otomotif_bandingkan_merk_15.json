@@ -1,0 +1,105 @@
+{
+  "scenario_id": "otomotif_bandingkan_merk_15",
+  "bidang": "otomotif",
+  "produk": "mobil bekas sertifikasi",
+  "persona": {
+    "tipe": "loyal_merk_lain",
+    "emosi_awal": "defensif"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang. Lagi cari mobil bekas sertifikasi nih, Pak? Biar tidak salah pilih, saya bantu sesuaikan dengan kebutuhannya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir mobil bekas sertifikasi nih. Apa sih bedanya sama merk yang itu?",
+      "keberatan": "bandingkan_kompetitor",
+      "emosi": "defensif"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh tahu biasanya dipakai untuk apa? Dan kira-kira sehari seberapa sering?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, terus?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: harganya jauh di bawah unit baru tapi kondisinya masih prima dan siap pakai.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, beda juga ya ternyata.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Pak. Nah, kalau dibandingkan berdampingan, fitur keselamatan dan garansinya beda kelas, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm, beda juga ya ternyata.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Tapi tetap agak mahal ya.",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Pak. Nah, bisa dicicil ringan atau ada tipe yang lebih ramah budget dengan fungsi mirip, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Biasanya saya pakai merk sebelah sih, tapi oke boleh dijelaskan.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus proses administrasi-nya ya, Pak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sip, proses saja.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau berkenan, perpanjangan garansi mesin jadi 2 tahun ini pas dengan kebutuhan Bapak/Ibu tadi, bikin lebih worth it. Saya masukkan ya?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

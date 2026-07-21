@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_boros_bbm_12",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau yang mana? Semua bagus kok, tinggal pilih aja.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat MPV keluarga 7-seater nih. Wah CC segini pasti minum bensin ya?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ada pengalaman kurang enak dengan produk sebelumnya? Biar yang ini benar-benar menjawab kebutuhannya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, betul.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: konsumsi BBM-nya masih wajar untuk ukuran mobil sebesar ini, sekitar 11-12 km/liter.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Wajar banget dipikirkan. Kenyataannya, kuncinya di mode berkendara Eco yang otomatis mengatur bahan bakar saat macet, dan itu bisa Bapak/Ibu buktikan sendiri.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya sudah kalau begitu.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau tidak ada yang mengganjal lagi, boleh saya bantu lanjutkan ke proses administrasi, Mbak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah deh, boleh lihat lebih lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar makin lengkap, banyak pelanggan menambahkan paket peredam kabin + kamera mundur. Mau saya siapkan sekalian?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

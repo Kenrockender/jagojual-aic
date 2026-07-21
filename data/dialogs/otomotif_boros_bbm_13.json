@@ -1,0 +1,105 @@
+{
+  "scenario_id": "otomotif_boros_bbm_13",
+  "bidang": "otomotif",
+  "produk": "SUV compact",
+  "persona": {
+    "tipe": "skeptis",
+    "emosi_awal": "ragu"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau yang mana? Semua bagus kok, tinggal pilih aja.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari SUV compact buat keluarga muda yang suka touring.",
+      "keberatan": null,
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pokoknya SUV compact ini paling laku, langsung ambil aja deh.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke saya dengerin.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Dibanding pilihan lain, nilai lebih SUV compact ada di sini: posisi duduknya tinggi jadi pandangan luas dan lebih santai saat macet panjang.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Mobil segini boros nggak sih bensinnya?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yaudah Bu saya kasih diskon deh biar sama kayak yang lain.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke... tapi saya masih agak ragu sih.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Harganya masih di atas rencana saya nih.",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Bu. Nah, bisa dicicil ringan atau ada tipe yang lebih ramah budget dengan fungsi mirip, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah coba lihat dulu deh buktinya.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau tidak ada yang mengganjal lagi, boleh saya bantu lanjutkan ke proses administrasi, Bu?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, kita lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan paket pelindung cat + servis gratis 1 tahun? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

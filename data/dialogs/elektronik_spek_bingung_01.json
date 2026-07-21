@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_spek_bingung_01",
+  "bidang": "elektronik",
+  "produk": "TV LED 43 inch",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mari, Kak, silakan masuk. Kebetulan pas banget, boleh saya temani lihat-lihat TV LED 43 inch-nya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari TV LED 43 inch buat ruang keluarga ukuran sedang.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekarang lagi pakai yang seperti apa? Ada yang kurang sreg dari yang sekarang, biar saya carikan solusinya?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Paham-paham.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau begitu ini cocok. Warnanya tajam dan konsumsi listriknya hemat karena led generasi baru. Artinya sehari-hari pemakaiannya lebih tenang.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Istilah-istilahnya asing buat saya.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya mengerti maksud Bapak/Ibu. Izinkan saya luruskan: tidak usah pusing dengan angka-angkanya, saya terjemahkan ke manfaat sehari-hari saja.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Tambahin bracket dinding + pemasangan rapi juga ya, biar tokonya untung sedikit.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "scenario_id": "otomotif_ruang_kabin_24",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang, Mas. Saya Adit, siap bantu. Lagi cari-cari city car hatchback ya?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir city car hatchback nih. Kalau bawa barang banyak, bagasinya mepet nggak?",
+      "keberatan": "tidak_butuh",
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh cerita sedikit kebiasaan pemakaiannya? Dari situ saya bisa bantu pilihkan yang tidak mubazir.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke saya dengerin.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nah untuk kebutuhan tadi, city car hatchback ini pas: biaya perawatannya murah dan nilai jualnya tetap diminati anak muda. Jadi langsung menjawab yang Bapak/Ibu butuhkan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Mas? Kursinya bisa dikonfigurasi, jadi fleksibel antara muat orang atau muat barang. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya sudah kalau begitu.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Unitnya kebetulan masih ready. Mau saya amankan dulu untuk Bapak/Ibu?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya mau yang ini.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

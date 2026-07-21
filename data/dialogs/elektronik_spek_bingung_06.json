@@ -1,0 +1,81 @@
+{
+  "scenario_id": "elektronik_spek_bingung_06",
+  "bidang": "elektronik",
+  "produk": "TV LED 43 inch",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Cari TV LED 43 inch ya? Yang ini aja langsung, bagus kok, nggak usah mikir lama.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh TV LED 43 inch nih, buat kamar utama yang luas.",
+      "keberatan": null,
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sebelum saya sarankan, boleh saya tanya kebutuhannya dulu? Ini lebih ke kamar utama yang luas, atau ada prioritas lain?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Langsung intinya aja deh.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau begitu ini cocok. Sudah bergaransi resmi panel 2 tahun, bukan sekadar garansi toko. Artinya sehari-hari pemakaiannya lebih tenang.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Speknya banyak, saya nggak ngerti mana yang cocok.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pertanyaan yang bagus, Kak. Justru di situ bedanya: kalau tujuannya seperti yang tadi, tipe ini yang paling masuk akal, yang lain justru mubazir.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke oke, paham. Lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar pas, Bapak/Ibu lebih nyaman ambil yang ini atau yang tadi satunya? Saya siapkan yang dipilih.",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah gas, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

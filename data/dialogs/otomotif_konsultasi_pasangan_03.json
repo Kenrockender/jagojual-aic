@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_konsultasi_pasangan_03",
+  "bidang": "otomotif",
+  "produk": "SUV compact",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo Pak, apa kabar? Silakan, kalau ada yang menarik nanti saya jelaskan detailnya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi naksir SUV compact nih. Saya pulang dulu, bahas sama keluarga.",
+      "keberatan": "mau_pikir_pikir",
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ada pengalaman kurang enak dengan produk sebelumnya? Biar yang ini benar-benar menjawab kebutuhannya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, terus?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nah untuk kebutuhan tadi, SUV compact ini pas: posisi duduknya tinggi jadi pandangan luas dan lebih santai saat macet panjang. Jadi langsung menjawab yang Bapak/Ibu butuhkan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya udah, intinya oke lah.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya paham kekhawatiran Bapak/Ibu. Banyak pelanggan awalnya berpikir sama, sampai tahu bahwa boleh banget, biar mantap saya siapkan ringkasan spesifikasi dan simulasi biaya untuk dibawa pulang.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya udah, intinya oke lah.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau tidak ada yang mengganjal lagi, boleh saya bantu lanjutkan ke test drive, Pak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah gas, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan roof rack untuk barang touring? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

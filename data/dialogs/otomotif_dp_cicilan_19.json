@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_dp_cicilan_19",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "city car hatchback? Ada tuh di sana, lihat sendiri aja dulu ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat city car hatchback nih. Wah DP-nya kayaknya kemahalan buat saya.",
+      "keberatan": "harga",
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Mau yang murah atau yang mahal? Sudah itu saja.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh, lanjut.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang bikin city car hatchback ini menonjol, bobotnya ringan jadi tarikannya responsif dan asyik di jalanan kota, dan itu yang paling terasa manfaatnya di pemakaian harian.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya udah, intinya oke lah.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pertanyaan yang bagus, Pak. Justru di situ bedanya: kalau berkenan, saya bantu simulasikan beberapa pilihan biar kelihatan mana yang paling pas di kantong.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke oke, paham. Lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ayo dong Pak ambil sekarang, nanti kehabisan lho, buruan.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke cepetan proses ya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan spoiler + velg ringan? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_bandingkan_merk_02",
+  "bidang": "otomotif",
+  "produk": "MPV keluarga 7-seater",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau yang mana? Semua bagus kok, tinggal pilih aja.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Kebetulan lagi cari MPV keluarga 7-seater nih. Merk sebelah lebih murah lho, kenapa harus ini?",
+      "keberatan": "bandingkan_kompetitor",
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh cerita sedikit kebiasaan pemakaiannya? Dari situ saya bisa bantu pilihkan yang tidak mubazir.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh dijelaskan lebih detail?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: kabin 3 baris benar-benar muat 7 orang dan bagasinya masih lega untuk koper.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya jadi lebih ngerti.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Percaya saja sama saya, dijamin tidak nyesel, sudah banyak yang beli.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya jadi lebih ngerti.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ayo dong Mbak ambil sekarang, nanti kehabisan lho, buruan.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, saya ambil.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Tambahin paket peredam kabin + kamera mundur juga ya, biar tokonya untung sedikit.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

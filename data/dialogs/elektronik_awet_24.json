@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_awet_24",
+  "bidang": "elektronik",
+  "produk": "smartphone mid-range",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo, Mas, silakan dilihat-lihat dulu. Kalau boleh tahu, ini untuk anak sekolah untuk belajar online atau ada kebutuhan lain?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lagi butuh smartphone mid-range nih, buat anak sekolah untuk belajar online.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya rekomendasinya tepat, boleh saya tahu apa yang bikin Bapak/Ibu tertarik ke smartphone mid-range ini?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Paham-paham.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: layarnya sudah 90Hz jadi scroll dan game terasa mulus.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya pernah kapok beli yang cepat rusak.",
+      "keberatan": "ragu_kualitas",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya mengerti maksud Bapak/Ibu. Izinkan saya luruskan: asal pemakaian normal, rata-rata pelanggan kami memakainya bertahun-tahun tanpa keluhan.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau tidak ada yang mengganjal lagi, boleh saya bantu lanjutkan ke cek unit ready, Mas?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Biar makin lengkap, banyak pelanggan menambahkan tukar tambah HP lama biar lebih hemat. Mau saya siapkan sekalian?",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

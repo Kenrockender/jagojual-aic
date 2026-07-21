@@ -1,0 +1,87 @@
+{
+  "scenario_id": "otomotif_ruang_kabin_20",
+  "bidang": "otomotif",
+  "produk": "mobil bekas sertifikasi",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau beli apa? Ini mobil bekas sertifikasi-nya lagi promo, ambil aja mumpung murah.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat mobil bekas sertifikasi nih. Muat nggak ya buat kami sekeluarga plus barang?",
+      "keberatan": "tidak_butuh",
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sebelum saya sarankan, boleh saya tanya kebutuhannya dulu? Ini lebih ke budget terbatas tapi mau mobil layak, atau ada prioritas lain?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, terus?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ya bagus lah, kan mahal. Ada garansi, ada bonus, komplit.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Masa tidak percaya sama saya? Ini barang bagus lho.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm boleh juga.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Menarik juga, boleh saya pertimbangkan dengan serius.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Tambahin paket detailing + ganti oli menyeluruh juga ya, biar tokonya untung sedikit.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

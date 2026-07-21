@@ -1,0 +1,93 @@
+{
+  "scenario_id": "otomotif_bandingkan_merk_14",
+  "bidang": "otomotif",
+  "produk": "city car hatchback",
+  "persona": {
+    "tipe": "banyak_tanya",
+    "emosi_awal": "penasaran"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Mau beli apa? Ini city car hatchback-nya lagi promo, ambil aja mumpung murah.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya saya lagi cari city car hatchback buat mobil kedua di rumah.",
+      "keberatan": null,
+      "emosi": "penasaran"
+    },
+    {
+      "speaker": "sales",
+      "text": "Rencananya dipakai berapa orang biasanya? Dan lebih sering dalam kota atau jarak jauh?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Boleh dijelaskan lebih detail?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekarang lagi pakai yang seperti apa? Ada yang kurang sreg dari yang sekarang, biar saya carikan solusinya?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Kalau yang tipe satunya beda jauh nggak?",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang bikin city car hatchback ini menonjol, biaya perawatannya murah dan nilai jualnya tetap diminati anak muda, dan itu yang paling terasa manfaatnya di pemakaian harian.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Apa sih bedanya sama merk yang itu?",
+      "keberatan": "bandingkan_kompetitor",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Betul, Mbak, wajar kalau ragu. Tapi begini: kalau dibandingkan berdampingan, fitur keselamatan dan garansinya beda kelas. Gimana, sudah lebih jelas?",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke deh, itu poin yang bagus.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Menurut saya ini sudah paling sesuai kebutuhan tadi. Lanjut ke langkah berikutnya, Mbak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya mau yang ini.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

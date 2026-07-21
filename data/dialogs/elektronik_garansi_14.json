@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_garansi_14",
+  "bidang": "elektronik",
+  "produk": "smartphone mid-range",
+  "persona": {
+    "tipe": "sensitif_harga",
+    "emosi_awal": "hati_hati"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang. Lagi cari smartphone mid-range nih, Mas? Biar tidak salah pilih, saya bantu sesuaikan dengan kebutuhannya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya tertarik sama smartphone mid-range ini, kebetulan lagi perlu untuk anak sekolah untuk belajar online.",
+      "keberatan": null,
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Rencananya dipakai berapa orang biasanya? Dan lebih sering dalam kota atau jarak jauh?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya sih.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Nah untuk kebutuhan tadi, smartphone mid-range ini pas: kameranya sudah ada OIS jadi hasil foto malam tetap tajam tidak gampang blur. Jadi langsung menjawab yang Bapak/Ibu butuhkan.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Garansinya resmi apa toko? Berapa lama?",
+      "keberatan": "ragu_kualitas",
+      "emosi": "hati_hati"
+    },
+    {
+      "speaker": "sales",
+      "text": "Betul, Mas, wajar kalau ragu. Tapi begini: ini garansi resmi pabrik, klaimnya di service center resmi bukan di toko yang bisa tutup sewaktu-waktu. Gimana, sudah lebih jelas?",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oh begitu ya, oke masuk akal.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus proses administrasi-nya ya, Mas?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Yaudah kalau cicilannya masuk, saya jadi.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sekalian, mau saya tambahkan tukar tambah HP lama biar lebih hemat? Lumayan buat jaga-jaga dan menambah kenyamanan, cuma sedikit tambahan.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}

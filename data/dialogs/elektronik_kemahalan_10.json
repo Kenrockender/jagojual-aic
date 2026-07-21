@@ -1,0 +1,81 @@
+{
+  "scenario_id": "elektronik_kemahalan_10",
+  "bidang": "elektronik",
+  "produk": "kulkas 2 pintu",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Halo, Mbak, silakan dilihat-lihat dulu. Kalau boleh tahu, ini untuk usaha katering rumahan atau ada kebutuhan lain?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ini lagi lihat-lihat kulkas 2 pintu yang cocok untuk usaha katering rumahan.",
+      "keberatan": null,
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Yang paling penting buat Bapak/Ibu apa nih, usaha katering rumahan, hemat biaya, atau kenyamanan? Biar saya prioritaskan.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Langsung intinya aja deh.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Dibanding pilihan lain, nilai lebih kulkas 2 pintu ada di sini: rak kacanya kuat menahan beban dan ada laci sayur khusus biar sayur tetap segar.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Wah over budget saya nih.",
+      "keberatan": "harga",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Boleh saya jelaskan sedikit, Mbak? Bisa juga dicicil 0% beberapa bulan, jadi tidak berat di awal. Jadi ini bukan sekadar klaim.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke oke, paham. Lanjut.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ayo dong Mbak ambil sekarang, nanti kehabisan lho, buruan.",
+      "teknik": "closing",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke cepetan proses ya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    }
+  ]
+}

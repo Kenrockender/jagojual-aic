@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_harga_toko_sebelah_02",
+  "bidang": "elektronik",
+  "produk": "mesin cuci front-loading",
+  "persona": {
+    "tipe": "buru_buru",
+    "emosi_awal": "tidak_sabar"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat siang, Kak. Silakan, ada yang bisa saya bantu? Lagi cari yang seperti apa nih?",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya tertarik sama mesin cuci front-loading ini, kebetulan lagi perlu untuk yang mau hemat air dan listrik.",
+      "keberatan": null,
+      "emosi": "tidak_sabar"
+    },
+    {
+      "speaker": "sales",
+      "text": "Ada pengalaman kurang enak dengan produk sebelumnya? Biar yang ini benar-benar menjawab kebutuhannya.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Langsung intinya aja deh.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Keunggulan utamanya yang relevan buat Bapak/Ibu begini: putaran pengeringnya kencang, jemuran jadi cepat kering meski mendung.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Sebelah lebih murah lho, bisa turun harga nggak?",
+      "keberatan": "bandingkan_kompetitor",
+      "emosi": "ragu"
+    },
+    {
+      "speaker": "sales",
+      "text": "Saya mengerti maksud Bapak/Ibu. Izinkan saya luruskan: harga kami sudah termasuk layanan purna jual yang bisa Bapak/Ibu klaim kapan saja.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya udah, intinya oke lah.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Supaya tidak bolak-balik, sekalian saya bantu urus cek unit ready-nya ya, Kak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke cepetan proses ya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Beli layanan antar-pasang dan uji coba gratis juga dong, mumpung di sini, nambah sedikit doang kok.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

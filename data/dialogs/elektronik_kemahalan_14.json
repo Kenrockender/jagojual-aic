@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_kemahalan_14",
+  "bidang": "elektronik",
+  "produk": "smartphone mid-range",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Iya Bu mau yang mana? Langsung saya buatkan nota ya biar cepat.",
+      "teknik": "sapa_rapport",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat smartphone mid-range nih. Ada yang lebih murah nggak? Ini di luar budget.",
+      "keberatan": "harga",
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Pokoknya smartphone mid-range ini paling laku, langsung ambil aja deh.",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Iya, betul.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau begitu ini cocok. Layarnya sudah 90hz jadi scroll dan game terasa mulus. Artinya sehari-hari pemakaiannya lebih tenang.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Hmm boleh juga.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau soal itu sih relatif ya, tergantung orangnya. Yang penting ambil dulu.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "lemah"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Ya sudah kalau begitu.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau ini cocok, saya bisa langsung siapkan untuk hari ini juga, Bu. Mau saya proseskan?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Menarik juga, boleh saya pertimbangkan dengan serius.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Beli earbuds nirkabel dengan harga bundling juga dong, mumpung di sini, nambah sedikit doang kok.",
+      "teknik": "upsell",
+      "kualitas": "lemah"
+    }
+  ]
+}

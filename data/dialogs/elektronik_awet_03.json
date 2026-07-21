@@ -1,0 +1,87 @@
+{
+  "scenario_id": "elektronik_awet_03",
+  "bidang": "elektronik",
+  "produk": "AC 1 PK inverter",
+  "persona": {
+    "tipe": "cuma_lihat",
+    "emosi_awal": "santai"
+  },
+  "grounding": {
+    "framework": [
+      "SPIN",
+      "AIDA",
+      "FAB",
+      "objection-handling"
+    ],
+    "generator": "grounded-local-v2",
+    "divalidasi_manusia": false
+  },
+  "turns": [
+    {
+      "speaker": "sales",
+      "text": "Selamat datang. Lagi cari AC 1 PK inverter nih, Mbak? Biar tidak salah pilih, saya bantu sesuaikan dengan kebutuhannya ya.",
+      "teknik": "sapa_rapport",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Saya lagi lihat AC 1 PK inverter nih. Saya pernah kapok beli yang cepat rusak.",
+      "keberatan": "ragu_kualitas",
+      "emosi": "santai"
+    },
+    {
+      "speaker": "sales",
+      "text": "Sebelum saya sarankan, boleh saya tanya kebutuhannya dulu? Ini lebih ke kamar tidur ukuran 3x4 meter, atau ada prioritas lain?",
+      "teknik": "gali_kebutuhan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Paham-paham.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Coba saya jelaskan yang paling nyambung dengan kebutuhan tadi: sudah dilengkapi mode hemat malam yang otomatis menyesuaikan suhu.",
+      "teknik": "presentasi_manfaat",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Oke, saya jadi lebih ngerti.",
+      "keberatan": null,
+      "emosi": "netral"
+    },
+    {
+      "speaker": "sales",
+      "text": "Terima kasih sudah jujur, Mbak. Nah, kalau dirawat sesuai anjuran, usianya bisa jauh lebih panjang dari garansinya, jadi bisa lebih tenang mempertimbangkannya.",
+      "teknik": "atasi_keberatan",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Lumayan meyakinkan sih penjelasannya.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Kalau tidak ada yang mengganjal lagi, boleh saya bantu lanjutkan ke simulasi cicilan, Mbak?",
+      "teknik": "closing",
+      "kualitas": "baik"
+    },
+    {
+      "speaker": "pelanggan",
+      "text": "Menarik juga, boleh saya pertimbangkan dengan serius.",
+      "keberatan": null,
+      "emosi": "tertarik"
+    },
+    {
+      "speaker": "sales",
+      "text": "Satu lagi yang biasanya berguna: voucher servis cuci AC 2x setahun. Sifatnya opsional, tapi sayang kalau nanti nyari terpisah.",
+      "teknik": "upsell",
+      "kualitas": "baik"
+    }
+  ]
+}
