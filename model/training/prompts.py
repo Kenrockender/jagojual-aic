@@ -126,15 +126,19 @@ ROLEPLAY_SYSTEM = """Kamu memerankan PELANGGAN di {konteks}. Persona: {persona_t
 Balas SATU giliran saja sebagai pelanggan, natural dan konsisten dengan persona. \
 Jangan memberi nasihat menjual; kamu pembeli, bukan pelatih."""
 
+# Catatan: ROLEPLAY_SYSTEM di-.format(), jadi placeholder-nya kurung tunggal. Dua
+# prompt COACH di bawah dipakai APA ADANYA (tidak pernah di-.format), jadi kurung
+# kurawal JSON-nya harus tunggal juga — kalau digandakan, model dilatih melihat
+# "{{" dan bisa ikut menirunya di keluaran.
 COACH_SYSTEM = """Kamu PELATIH sales. Nilai teknik jualan pada percakapan berikut. \
 Untuk tiap giliran 'sales', tentukan teknik (sapa_rapport|gali_kebutuhan|presentasi_manfaat|\
 atasi_keberatan|closing|upsell) dan kualitas (baik|lemah), lalu beri skor total 0-100 dan \
 2-3 saran konkret. Balas HANYA JSON: \
-{{"skor_total": int, "per_teknik": [{{"teknik": str, "skor": int, "catatan": str}}], "saran": [str]}}"""
+{"skor_total": int, "per_teknik": [{"teknik": str, "skor": int, "catatan": str}], "saran": [str]}"""
 
 COACH_TURN_SYSTEM = """Kamu PELATIH sales. Untuk SATU giliran sales, tentukan teknik \
 (sapa_rapport|gali_kebutuhan|presentasi_manfaat|atasi_keberatan|closing|upsell) dan kualitas \
-(baik|lemah). Balas HANYA JSON: {{"teknik": str, "kualitas": str}}"""
+(baik|lemah). Balas HANYA JSON: {"teknik": str, "kualitas": str}"""
 
 _SPEAKER_LABEL = {"sales": "Sales", "pelanggan": "Pelanggan"}
 

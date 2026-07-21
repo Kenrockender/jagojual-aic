@@ -1,7 +1,13 @@
-# Dependensi berat untuk MODE=local (diisi/diaktifkan di M3).
-# Sengaja dipisah agar image scaffold (mock mode) tetap ringan.
-# torch
-# transformers
-# peft
-# accelerate
-# bitsandbytes
+# Dependensi berat untuk JAGOJUAL_MODE=local (inferensi LLM + adapter LoRA).
+# Sengaja dipisah dari requirements.txt agar image mock mode tetap ringan — mock mode
+# adalah jalur yang dijamin bisa dijalankan panitia tanpa GPU.
+#
+#   pip install -r requirements.txt -r requirements-model.txt
+#
+# torch: pasang sesuai CUDA mesin masing-masing (lihat https://pytorch.org/get-started/locally/).
+# Contoh CUDA 12.1:  pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.3
+transformers>=4.44
+peft>=0.13
+accelerate>=0.34
+bitsandbytes>=0.43   # kuantisasi 4-bit; di Windows butuh wheel bitsandbytes yang mendukung CUDA

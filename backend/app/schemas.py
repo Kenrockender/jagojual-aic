@@ -19,6 +19,9 @@ TEKNIK = [
 class Persona(BaseModel):
     tipe: str
     deskripsi: str
+    # Ikut masuk prompt role-play (lihat prompts.ROLEPLAY_SYSTEM) — bukan label
+    # klasifikasi, hanya penanda nada awal pelanggan.
+    emosi_awal: str = "netral"
 
 
 class ScenarioSummary(BaseModel):

@@ -1,7 +1,9 @@
-"""Skenario latihan (hardcoded untuk MVP). 2 bidang: otomotif + elektronik.
+﻿"""Skenario latihan (hardcoded untuk MVP). 2 bidang: otomotif + elektronik.
 
 `lanjutan` = balasan pelanggan bertahap yang dipakai MODE=mock. Di MODE=local
-(M3), balasan dihasilkan LLM sehingga `lanjutan` tidak lagi dibutuhkan.
+balasan dihasilkan LLM sehingga `lanjutan` tidak dipakai.
+
+`persona.emosi_awal` ikut masuk prompt role-play (lihat `prompts.roleplay_system`).
 """
 
 from .schemas import Persona, Scenario, ScenarioSummary
@@ -13,7 +15,7 @@ _SCENARIOS: list[Scenario] = [
         bidang="otomotif",
         judul="Pelanggan khawatir boros BBM",
         produk="SUV 1.5L Turbo",
-        persona=Persona(tipe="skeptis-hemat", deskripsi="Bapak berkeluarga, sangat memperhitungkan biaya bensin bulanan."),
+        persona=Persona(tipe="skeptis-hemat", deskripsi="Bapak berkeluarga, sangat memperhitungkan biaya bensin bulanan.", emosi_awal="ragu"),
         pembuka="Mobil segini boros nggak sih? Sebulan bisa habis berapa buat bensin?",
         keberatan=["boros_bbm", "dp_cicilan", "bandingkan_merk"],
         lanjutan=[
@@ -27,7 +29,7 @@ _SCENARIOS: list[Scenario] = [
         bidang="otomotif",
         judul="Ragu harga jual kembali",
         produk="Sedan kompak",
-        persona=Persona(tipe="rasional", deskripsi="Pekerja kantoran, mikir nilai jual kembali dalam 5 tahun."),
+        persona=Persona(tipe="rasional", deskripsi="Pekerja kantoran, mikir nilai jual kembali dalam 5 tahun.", emosi_awal="hati_hati"),
         pembuka="Sedan ini kalau dijual lagi 5 tahun lagi jatuh harganya banyak nggak?",
         keberatan=["harga_jual_kembali", "bandingkan_merk", "harga"],
         lanjutan=[
@@ -41,7 +43,7 @@ _SCENARIOS: list[Scenario] = [
         bidang="otomotif",
         judul="Pelanggan cuma lihat-lihat",
         produk="MPV keluarga",
-        persona=Persona(tipe="pasif", deskripsi="Datang ke showroom tanpa niat beli hari ini, sekadar survei."),
+        persona=Persona(tipe="pasif", deskripsi="Datang ke showroom tanpa niat beli hari ini, sekadar survei.", emosi_awal="santai"),
         pembuka="Saya cuma lihat-lihat aja dulu ya, belum tentu beli.",
         keberatan=["cuma_lihat_lihat", "mau_pikir_pikir", "harga"],
         lanjutan=[
@@ -56,7 +58,7 @@ _SCENARIOS: list[Scenario] = [
         bidang="elektronik",
         judul="Bandingkan harga toko sebelah",
         produk="TV LED 43 inch",
-        persona=Persona(tipe="skeptis", deskripsi="Ibu rumah tangga, teliti soal harga dan garansi."),
+        persona=Persona(tipe="skeptis", deskripsi="Ibu rumah tangga, teliti soal harga dan garansi.", emosi_awal="hati_hati"),
         pembuka="Ini kok lebih mahal dari toko sebelah ya? Di sana lebih murah lho.",
         keberatan=["harga_toko_sebelah", "harga", "ragu_kualitas"],
         lanjutan=[
@@ -70,7 +72,7 @@ _SCENARIOS: list[Scenario] = [
         bidang="elektronik",
         judul="Bingung soal spesifikasi",
         produk="Laptop tipis",
-        persona=Persona(tipe="awam", deskripsi="Mahasiswa, tidak paham spek teknis, butuh dipandu."),
+        persona=Persona(tipe="awam", deskripsi="Mahasiswa, tidak paham spek teknis, butuh dipandu.", emosi_awal="penasaran"),
         pembuka="Saya nggak ngerti spek-spek gini. Ini bagus buat kuliah nggak sih?",
         keberatan=["ragu_kualitas", "harga", "mau_pikir_pikir"],
         lanjutan=[
@@ -84,7 +86,7 @@ _SCENARIOS: list[Scenario] = [
         bidang="elektronik",
         judul="Khawatir cepat rusak",
         produk="Mesin cuci front loading",
-        persona=Persona(tipe="hati-hati", deskripsi="Bapak yang pernah kecewa produk cepat rusak."),
+        persona=Persona(tipe="hati-hati", deskripsi="Bapak yang pernah kecewa produk cepat rusak.", emosi_awal="curiga"),
         pembuka="Mesin cuci gini biasanya cepet rusak nggak? Saya pernah kapok soalnya.",
         keberatan=["ragu_kualitas", "harga", "bandingkan_kompetitor"],
         lanjutan=[

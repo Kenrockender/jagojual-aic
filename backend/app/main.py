@@ -1,8 +1,13 @@
-from fastapi import FastAPI, HTTPException
+import logging
+
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from . import coach, roleplay
 from .config import settings
+# Aman diimpor di mock mode: torch dimuat malas di dalam fungsi, bukan saat import.
+from .llm import LLMError
 from .scenarios import get_scenario, list_scenarios
 from .schemas import (
     ChatRequest,
@@ -21,6 +26,21 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.exception_handler(LLMError)
+def llm_error_handler(request: Request, exc: LLMError) -> JSONResponse:
+    """MODE=local gagal → 503 dengan sebab yang jelas.
+
+    Sengaja TIDAK diam-diam jatuh ke mock: hasil mock bukan penilaian AI, dan
+    menyajikannya seolah-olah keluaran model akan menyesatkan penilaian juri.
+    """
+    logging.getLogger(__name__).error("LLM gagal: %s", exc)
+    return JSONResponse(
+        status_code=503,
+        content={"detail": f"Model lokal tidak bisa melayani permintaan: {exc}. "
+                           "Jalankan ulang dengan JAGOJUAL_MODE=mock bila hanya ingin mencoba alurnya."},
+    )
 
 
 @app.get("/api/health")
