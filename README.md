@@ -29,7 +29,8 @@ docker compose up --build
 - API docs: http://localhost:8000/docs
 
 Berjalan dalam **mock mode** (tanpa GPU). Balasan pelanggan & skor berasal dari
-skrip/heuristik — cukup untuk mendemokan alur end-to-end.
+skrip/heuristik — cukup untuk mendemokan alur end-to-end. UI menampilkan badge
+**"Mode contoh (tanpa AI)"** supaya statusnya tidak tertukar dengan keluaran model.
 
 ## Menjalankan (tanpa Docker)
 
@@ -94,7 +95,7 @@ JagoJual/
 | M2 — Skrip fine-tune QLoRA + evaluasi (Kaggle) | ✅ skrip siap |
 | M2 — Jalankan training & hasilkan adapter | ⬜ butuh sesi Kaggle |
 | M3 — Integrasi LLM lokal (MODE=local) | ✅ |
-| M4 — Polish frontend | ⬜ |
+| M4 — Polish frontend | ✅ |
 | M5 — Video PoW + video inovasi + proposal | ⬜ |
 
 Jalur kode sudah tersambung ujung ke ujung; yang tersisa adalah menjalankannya —

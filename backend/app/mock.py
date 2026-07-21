@@ -2,7 +2,10 @@
 
 Tujuannya: aplikasi tetap bisa dijalankan panitia TANPA GPU/model (syarat
 reproducibility). Logika di sini SENGAJA dangkal; penilaian sesungguhnya
-dikerjakan LLM fine-tuned di MODE=local (M3).
+dikerjakan LLM fine-tuned di MODE=local.
+
+Karena `catatan` ikut tampil di UI, teksnya harus menyatakan dengan jelas bahwa
+angka ini berasal dari heuristik — bukan dari model.
 """
 
 import random
@@ -45,7 +48,7 @@ def mock_evaluate(scenario: Scenario, history: list[ChatMessage]) -> EvaluateRes
         return int(min(100, 45 + hits * 18 + min(n, 3) * 5))
 
     per = [
-        TeknikScore(teknik=t, skor=skor(t), catatan="(mock) placeholder heuristik — dinilai LLM di M3")
+        TeknikScore(teknik=t, skor=skor(t), catatan="Mode contoh: skor dari pencocokan kata kunci, bukan penilaian model.")
         for t in TEKNIK
     ]
     total = round(sum(p.skor for p in per) / len(per))

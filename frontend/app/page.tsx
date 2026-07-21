@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import ModeBadge from "../components/ModeBadge";
 import { getScenarios, ScenarioSummary } from "../lib/api";
 
 export default function Home() {
@@ -12,14 +13,17 @@ export default function Home() {
   useEffect(() => {
     getScenarios()
       .then(setScenarios)
-      .catch(() => setErr("Gagal memuat skenario. Pastikan backend berjalan di http://localhost:8000."));
+      .catch((e) => setErr(e?.message ?? "Gagal memuat skenario."));
   }, []);
 
   const bidangs = Array.from(new Set(scenarios.map((s) => s.bidang)));
 
   return (
     <main className="mx-auto max-w-3xl p-6">
-      <h1 className="text-3xl font-bold tracking-tight">JagoJual</h1>
+      <div className="flex flex-wrap items-center gap-3">
+        <h1 className="text-3xl font-bold tracking-tight">JagoJual</h1>
+        <ModeBadge />
+      </div>
       <p className="mt-1 text-slate-600">
         Latihan percakapan jualan dengan pelanggan AI. Pilih skenario untuk mulai:
       </p>
