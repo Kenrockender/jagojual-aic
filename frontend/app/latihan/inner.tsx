@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import ModeBadge from "../../components/ModeBadge";
 import {
@@ -12,7 +12,32 @@ import {
   getScenario,
   Scenario,
   sendChat,
+  TeknikScore,
 } from "../../lib/api";
+
+/** Nama tampilan teknik. Sumber kebenaran label tetap `data/taxonomy.json`. */
+const NAMA_TEKNIK: Record<string, string> = {
+  sapa_rapport: "Sapaan & rapport",
+  gali_kebutuhan: "Menggali kebutuhan",
+  presentasi_manfaat: "Presentasi manfaat",
+  atasi_keberatan: "Mengatasi keberatan",
+  closing: "Closing",
+  upsell: "Upsell / cross-sell",
+};
+
+function nadaSkor(skor: number) {
+  if (skor >= 80) return { teks: "text-kuat", bg: "bg-kuat" };
+  if (skor >= 60) return { teks: "text-sedang", bg: "bg-sedang" };
+  return { teks: "text-lemah", bg: "bg-lemah" };
+}
+
+/** Satu kalimat yang membuat angka total berarti tanpa perlu ditafsirkan sendiri. */
+function putusan(skor: number): string {
+  if (skor >= 85) return "Tekniknya sudah kuat dan konsisten.";
+  if (skor >= 70) return "Arahnya sudah benar, tinggal dirapikan.";
+  if (skor >= 55) return "Beberapa teknik inti masih terlewat.";
+  return "Banyak momen penting yang belum tergarap.";
+}
 
 export default function LatihanInner() {
   const id = useSearchParams().get("id") || "";
@@ -22,6 +47,7 @@ export default function LatihanInner() {
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [result, setResult] = useState<EvaluateResponse | null>(null);
+  const akhirPercakapan = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -33,8 +59,13 @@ export default function LatihanInner() {
       .catch((e) => setErr(e?.message ?? "Gagal memuat skenario."));
   }, [id]);
 
+  // Balasan pelanggan bisa panjang; tanpa ini giliran terbaru jatuh di bawah layar.
+  useEffect(() => {
+    akhirPercakapan.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, [history, loading]);
+
   async function kirim() {
-    if (!input.trim() || !scenario) return;
+    if (!input.trim() || !scenario || loading) return;
     const salesMsg: ChatMessage = { role: "sales", text: input.trim() };
     const next = [...history, salesMsg];
     setHistory(next);
@@ -54,7 +85,7 @@ export default function LatihanInner() {
   }
 
   async function selesai() {
-    if (!scenario) return;
+    if (!scenario || loading) return;
     setLoading(true);
     setErr(null);
     try {
@@ -68,133 +99,186 @@ export default function LatihanInner() {
 
   if (!scenario) {
     return (
-      <main className="mx-auto max-w-2xl p-6">
-        {err ? <Pesan teks={err} /> : <p className="text-slate-500">Memuat…</p>}
-        <Link href="/" className="mt-4 inline-block text-sm text-slate-500 hover:text-slate-700">
-          ← Kembali
+      <main className="mx-auto max-w-2xl px-6 py-16">
+        {err ? <Galat teks={err} /> : <p className="text-tinta-samar">Memuat skenario…</p>}
+        <Link href="/" className="mt-6 inline-block text-sm text-tinta-lembut underline-offset-4 hover:underline">
+          ← Kembali ke daftar
         </Link>
       </main>
     );
   }
 
+  // ---------------------------------------------------------------- rapor ---
   if (result) {
+    const nada = nadaSkor(result.skor_total);
     return (
-      <main className="mx-auto max-w-2xl p-6">
-        <h1 className="text-2xl font-bold">Hasil Latihan</h1>
-        <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5">
-          <div className="text-4xl font-bold">
-            {result.skor_total}
-            <span className="text-lg font-normal text-slate-400">/100</span>
-          </div>
+      <main className="mx-auto max-w-2xl px-6 py-12 sm:py-16">
+        <p className="eyebrow">Rapor latihan</p>
+        <h1 className="mt-2 font-display text-3xl font-bold tracking-tight">{scenario.judul}</h1>
 
-          <div className="mt-5 space-y-3">
+        <div className="mt-8 flex items-end gap-5 border-b border-garis pb-8">
+          <div className="font-display text-7xl font-bold leading-none tabular-nums">
+            {result.skor_total}
+            <span className="ml-1 align-top text-2xl font-normal text-tinta-samar">/100</span>
+          </div>
+          <p className={`pb-2 text-[0.975rem] font-medium leading-snug ${nada.teks}`}>
+            {putusan(result.skor_total)}
+          </p>
+        </div>
+
+        <section className="mt-8">
+          <h2 className="eyebrow">Per teknik</h2>
+          <div className="mt-4 divide-y divide-garis border-y border-garis">
             {result.per_teknik.map((t) => (
-              <div key={t.teknik}>
-                <div className="flex items-center gap-3">
-                  <div className="w-40 shrink-0 text-sm capitalize">{t.teknik.replace(/_/g, " ")}</div>
-                  <div className="h-2 flex-1 rounded bg-slate-100">
-                    <div
-                      className="h-2 rounded bg-slate-800"
-                      style={{ width: `${Math.max(0, Math.min(100, t.skor))}%` }}
-                    />
-                  </div>
-                  <div className="w-10 text-right text-sm tabular-nums">{t.skor}</div>
-                </div>
-                {/* Catatan per teknik adalah inti umpan balik pelatih — sebelumnya ikut
-                    dikembalikan backend tapi tidak pernah ditampilkan. */}
-                {t.catatan && (
-                  <p className="mt-1 pl-[10.75rem] text-xs leading-relaxed text-slate-500">{t.catatan}</p>
-                )}
-              </div>
+              <BarisTeknik key={t.teknik} t={t} />
             ))}
           </div>
+        </section>
 
-          {result.saran.length > 0 && (
-            <>
-              <h2 className="mt-6 font-semibold">Saran perbaikan</h2>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">
-                {result.saran.map((s, i) => (
-                  <li key={i}>{s}</li>
-                ))}
-              </ul>
-            </>
-          )}
+        {result.saran.length > 0 && (
+          <section className="mt-10">
+            <h2 className="eyebrow">Yang perlu dibenahi</h2>
+            <ol className="mt-4 space-y-4">
+              {result.saran.map((s, i) => (
+                <li key={i} className="flex gap-4">
+                  <span className="font-display text-xl font-bold leading-none text-bata tabular-nums">
+                    {i + 1}
+                  </span>
+                  <p className="text-[0.925rem] leading-relaxed text-tinta-lembut">{s}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        <div className="mt-12 flex flex-wrap gap-3">
+          {/* Tombol, bukan Link: URL-nya sama persis sehingga navigasi tidak akan
+              memasang ulang komponen — cukup setel ulang state percakapannya. */}
+          <button
+            onClick={() => {
+              setResult(null);
+              setErr(null);
+              setHistory([{ role: "pelanggan", text: scenario.pembuka }]);
+            }}
+            className="bg-tinta px-5 py-2.5 text-sm font-medium text-kertas transition hover:bg-bata-tua"
+          >
+            Ulangi skenario ini
+          </button>
+          <Link
+            href="/"
+            className="border border-garis-tua px-5 py-2.5 text-sm font-medium transition hover:border-tinta"
+          >
+            Pilih skenario lain
+          </Link>
         </div>
-        <Link href="/" className="mt-6 inline-block rounded-lg bg-slate-800 px-4 py-2 text-sm text-white">
-          Latihan lagi
-        </Link>
       </main>
     );
   }
 
+  // ------------------------------------------------------------ percakapan ---
   const adaRespons = history.some((m) => m.role === "sales");
 
   return (
-    <main className="mx-auto max-w-2xl p-6">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <Link href="/" className="text-sm text-slate-500 hover:text-slate-700">
-          ← Ganti skenario
-        </Link>
-        <ModeBadge />
-      </div>
-      <h1 className="mt-2 text-xl font-bold">{scenario.judul}</h1>
-      <p className="text-sm text-slate-500">
-        {scenario.produk} · persona: {scenario.persona.tipe}
-      </p>
+    <main className="mx-auto flex min-h-screen max-w-2xl flex-col px-6 py-10">
+      <header className="border-b border-garis pb-5">
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" className="text-sm text-tinta-lembut underline-offset-4 hover:underline">
+            ← Ganti skenario
+          </Link>
+          <ModeBadge />
+        </div>
+        <h1 className="mt-3 font-display text-2xl font-bold tracking-tight">{scenario.judul}</h1>
+        <p className="mt-1 text-sm text-tinta-samar">
+          {scenario.produk} · pelanggan {scenario.persona.tipe}
+        </p>
+        <p className="mt-2 text-sm leading-relaxed text-tinta-lembut">{scenario.persona.deskripsi}</p>
+      </header>
 
-      <div className="mt-5 space-y-3">
+      <div className="flex-1 space-y-5 py-7">
         {history.map((m, i) => (
-          <div key={i} className={m.role === "sales" ? "text-right" : ""}>
-            <span
-              className={`inline-block max-w-[80%] whitespace-pre-wrap rounded-2xl px-4 py-2 text-left text-sm ${
-                m.role === "sales" ? "bg-slate-800 text-white" : "border border-slate-200 bg-white"
-              }`}
-            >
-              {m.text}
-            </span>
-          </div>
+          <Gelembung key={i} pesan={m} />
         ))}
-        {loading && <div className="text-sm text-slate-400">…</div>}
+        {loading && (
+          <p className="text-sm text-tinta-samar">
+            <span className="eyebrow">Pelanggan</span> sedang menimbang…
+          </p>
+        )}
+        <div ref={akhirPercakapan} />
       </div>
 
       {err && (
-        <div className="mt-4">
-          <Pesan teks={err} />
+        <div className="mb-4">
+          <Galat teks={err} />
         </div>
       )}
 
-      <div className="mt-5 flex gap-2">
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && kirim()}
-          placeholder="Ketik respons jualan Anda…"
-          aria-label="Respons jualan"
-          className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-slate-500"
-        />
+      <div className="sticky bottom-0 -mx-6 border-t border-garis bg-kertas/95 px-6 pb-6 pt-4 backdrop-blur">
+        <div className="flex gap-2">
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && kirim()}
+            placeholder="Tulis jawabanmu sebagai sales…"
+            aria-label="Respons jualan"
+            className="min-w-0 flex-1 border border-garis-tua bg-white px-4 py-2.5 text-sm outline-none transition placeholder:text-tinta-samar focus:border-bata"
+          />
+          <button
+            onClick={kirim}
+            disabled={loading || !input.trim()}
+            className="shrink-0 bg-tinta px-5 py-2.5 text-sm font-medium text-kertas transition hover:bg-bata-tua disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Kirim
+          </button>
+        </div>
         <button
-          onClick={kirim}
-          disabled={loading}
-          className="rounded-lg bg-slate-800 px-4 py-2 text-sm text-white disabled:opacity-50"
+          onClick={selesai}
+          disabled={loading || !adaRespons}
+          className="mt-2 w-full border border-garis-tua py-2.5 text-sm font-medium transition hover:border-tinta disabled:cursor-not-allowed disabled:opacity-40"
         >
-          Kirim
+          {adaRespons ? "Selesai & nilai percakapan" : "Jawab dulu untuk bisa dinilai"}
         </button>
       </div>
-
-      <button
-        onClick={selesai}
-        disabled={loading || !adaRespons}
-        className="mt-3 w-full rounded-lg border border-slate-300 py-2 text-sm hover:bg-slate-100 disabled:opacity-50"
-      >
-        Selesai &amp; Nilai
-      </button>
     </main>
   );
 }
 
-function Pesan({ teks }: { teks: string }) {
+function Gelembung({ pesan }: { pesan: ChatMessage }) {
+  const sales = pesan.role === "sales";
   return (
-    <p role="alert" className="rounded-lg bg-red-50 p-3 text-sm text-red-700">
+    <div className={sales ? "flex flex-col items-end" : "flex flex-col items-start"}>
+      <span className="eyebrow mb-1.5">{sales ? "Kamu" : "Pelanggan"}</span>
+      <p
+        className={`max-w-[85%] whitespace-pre-wrap px-4 py-3 text-[0.925rem] leading-relaxed ${
+          sales ? "bg-tinta text-kertas" : "border border-garis bg-white"
+        }`}
+      >
+        {pesan.text}
+      </p>
+    </div>
+  );
+}
+
+function BarisTeknik({ t }: { t: TeknikScore }) {
+  const nada = nadaSkor(t.skor);
+  const lebar = Math.max(0, Math.min(100, t.skor));
+  return (
+    <div className="py-4">
+      <div className="flex items-baseline justify-between gap-4">
+        <span className="text-sm font-medium">{NAMA_TEKNIK[t.teknik] ?? t.teknik.replace(/_/g, " ")}</span>
+        <span className={`text-sm font-semibold tabular-nums ${nada.teks}`}>{t.skor}</span>
+      </div>
+      <div className="mt-2 h-1 bg-kertas-tua">
+        <div className={`h-1 ${nada.bg}`} style={{ width: `${lebar}%` }} />
+      </div>
+      {/* Catatan inilah umpan balik pelatihnya — angka saja tidak mengajari apa pun. */}
+      {t.catatan && <p className="mt-2 text-[0.8rem] leading-relaxed text-tinta-samar">{t.catatan}</p>}
+    </div>
+  );
+}
+
+function Galat({ teks }: { teks: string }) {
+  return (
+    <p role="alert" className="border-l-2 border-lemah bg-bata-muda/40 px-4 py-3 text-sm text-bata-tua">
       {teks}
     </p>
   );

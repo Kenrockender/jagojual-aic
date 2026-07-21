@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    /* Tekstur kertas amat halus — cukup untuk menghilangkan kesan "kanvas kosong",
+       tidak sampai mengganggu keterbacaan teks percakapan. */
+    background-color: theme("colors.kertas.DEFAULT");
+    background-image: radial-gradient(theme("colors.garis.DEFAULT") 0.5px, transparent 0.5px);
+    background-size: 22px 22px;
+  }
+
+  ::selection {
+    background-color: theme("colors.bata.muda");
+    color: theme("colors.bata.tua");
+  }
+
+  /* Fokus keyboard harus terlihat jelas: trainee mengetik terus-menerus dan
+     berpindah antar kontrol dengan Tab. */
+  :focus-visible {
+    outline: 2px solid theme("colors.bata.DEFAULT");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Label kecil huruf besar untuk menandai bagian tanpa menambah judul baru. */
+  .eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-tinta-samar;
+  }
+}
