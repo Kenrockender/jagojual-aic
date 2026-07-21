@@ -57,6 +57,8 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--resume", action="store_true",
                     help="Lanjutkan dari checkpoint terakhir di --out (sesi Kaggle mati di tengah jalan).")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--max-steps", type=int, default=-1,
+                    help="Batasi jumlah step (mis. 5 untuk smoke test cepat). -1 = pakai --epochs.")
 
     ap.add_argument("--lora-r", type=int, default=16)
     ap.add_argument("--lora-alpha", type=int, default=32)
@@ -84,7 +86,7 @@ def main() -> int:
 
     import torch
     from peft import LoraConfig
-    from transformers import AutoTokenizer, BitsAndBytesConfig
+    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
     from trl import SFTConfig, SFTTrainer
 
     if not torch.cuda.is_available():
@@ -128,6 +130,7 @@ def main() -> int:
     cfg = SFTConfig(
         output_dir=str(args.out),
         num_train_epochs=args.epochs,
+        max_steps=args.max_steps,
         learning_rate=args.lr,
         lr_scheduler_type="cosine",
         warmup_ratio=args.warmup_ratio,
@@ -148,14 +151,23 @@ def main() -> int:
         seed=args.seed,
     )
 
+    # Muat model secara eksplisit (bukan lewat model_init_kwargs) supaya kompatibel
+    # lintas versi TRL — di TRL baru SFTTrainer tidak lagi menerima model_init_kwargs.
+    model = AutoModelForCausalLM.from_pretrained(
+        args.base_model,
+        quantization_config=quant,
+        torch_dtype=dtype,
+        device_map="auto",
+    )
+    model.config.use_cache = False  # wajib saat gradient checkpointing aktif
+
     trainer = SFTTrainer(
-        model=args.base_model,
+        model=model,
         args=cfg,
         train_dataset=ds_train,
         eval_dataset=ds_val,
         peft_config=peft_config,
         processing_class=tokenizer,
-        model_init_kwargs={"quantization_config": quant, "torch_dtype": dtype, "device_map": "auto"},
     )
 
     # Hanya resume kalau memang ada checkpoint; kalau tidak, Trainer melempar error

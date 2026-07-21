@@ -8,3 +8,5 @@ bitsandbytes>=0.43
 accelerate>=0.34
 datasets>=2.20
 jsonschema>=4.0   # validasi dialog di 1_generate_data.py
+tiktoken          # tokenizer Qwen2.5 (tanpa ini load tokenizer gagal)
+sentencepiece     # fallback konversi tokenizer slow->fast
