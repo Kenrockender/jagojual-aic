@@ -75,8 +75,13 @@ def buat_dataset(baris: list[dict], tokenizer, max_len: int):
 
     def encode(ex):
         msgs = ex["messages"]
-        full = tokenizer.apply_chat_template(msgs, tokenize=True, add_generation_prompt=False)
-        prompt = tokenizer.apply_chat_template(msgs[:-1], tokenize=True, add_generation_prompt=True)
+        # Render ke teks dulu lalu tokenisasi biasa -> dijamin list[int] (bukan objek
+        # tokenizers.Encoding yang tak bisa ditulis Arrow). add_special_tokens=False
+        # karena template chat sudah menyertakan token spesialnya sendiri.
+        full_text = tokenizer.apply_chat_template(msgs, tokenize=False, add_generation_prompt=False)
+        prompt_text = tokenizer.apply_chat_template(msgs[:-1], tokenize=False, add_generation_prompt=True)
+        full = tokenizer(full_text, add_special_tokens=False)["input_ids"]
+        prompt = tokenizer(prompt_text, add_special_tokens=False)["input_ids"]
         n_prompt = min(len(prompt), len(full))
         labels = [-100] * n_prompt + full[n_prompt:]
         full, labels = full[:max_len], labels[:max_len]
