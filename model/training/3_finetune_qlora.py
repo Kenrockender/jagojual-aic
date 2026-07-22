@@ -5,21 +5,14 @@ saat demo — rulebook membatasi implementasi AI pada inferensi berparameter sta
 Keluarannya adalah adapter LoRA (puluhan MB) yang di-commit ke ../checkpoints/ lalu
 di-load backend di MODE=local.
 
-Kenapa QLoRA:
-  * Base 7B di-quantize 4-bit muat di satu GPU Kaggle (P100 16GB / T4 15GB), dan
-    adapter hasilnya cukup kecil untuk masuk repo — juri bisa memverifikasi sendiri.
-  * Yang dilatih hanya adapter; bobot base tetap milik Qwen (Apache-2.0) dan tidak
-    ikut di-commit.
+Implementasi memakai `transformers.Trainer` + PEFT langsung (bukan trl.SFTTrainer),
+supaya stabil lintas versi library Kaggle. Masking label: hanya token jawaban
+asisten yang dihitung loss-nya (prompt di-mask -100) — setara completion-only SFT.
 
 Pakai (di sel notebook Kaggle):
-    !pip install -q "transformers>=4.44" "trl>=0.12" "peft>=0.13" \
-                    "bitsandbytes>=0.43" "accelerate>=0.34" datasets
     !python 3_finetune_qlora.py --train ../../data/sft/train.jsonl \
                                --val   ../../data/sft/val.jsonl \
                                --out   ../checkpoints
-
-    # kalau 7B terlalu berat / lambat, turun ke cadangan:
-    !python 3_finetune_qlora.py --base-model Qwen/Qwen2.5-3B-Instruct ...
 """
 from __future__ import annotations
 
@@ -31,9 +24,6 @@ from pathlib import Path
 
 DEFAULT_BASE = "Qwen/Qwen2.5-7B-Instruct"
 
-# Semua proyeksi linear blok attention + MLP Qwen2. Melatih keduanya (bukan hanya
-# attention) memberi kapasitas lebih untuk tugas keluaran terstruktur, dengan biaya
-# parameter yang masih kecil pada r rendah.
 TARGET_MODULES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 
 
@@ -68,57 +58,65 @@ def parse_args() -> argparse.Namespace:
     return ap.parse_args()
 
 
-def muat_split(path: Path, tipe: list[str] | None) -> "datasets.Dataset":  # noqa: F821
-    from datasets import Dataset
-
+def muat_baris(path: Path, tipe: list[str] | None) -> list[dict]:
     baris = [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
     if tipe:
         baris = [b for b in baris if b["meta"]["tipe"] in tipe]
     if not baris:
         raise SystemExit(f"ERROR: {path} kosong setelah filter --tipe {tipe}.")
     print(f"  {path.name}: {len(baris)} contoh {dict(Counter(b['meta']['tipe'] for b in baris))}")
-    # Buang 'meta' — TRL hanya perlu kolom percakapan, kolom sisa bikin bingung collator.
-    return Dataset.from_list([{"messages": b["messages"]} for b in baris])
+    return baris
+
+
+def buat_dataset(baris: list[dict], tokenizer, max_len: int):
+    """Ubah {'messages': [...]} -> {input_ids, attention_mask, labels} dengan
+    masking completion-only (hanya jawaban asisten yang dihitung loss)."""
+    from datasets import Dataset
+
+    def encode(ex):
+        msgs = ex["messages"]
+        full = tokenizer.apply_chat_template(msgs, tokenize=True, add_generation_prompt=False)
+        prompt = tokenizer.apply_chat_template(msgs[:-1], tokenize=True, add_generation_prompt=True)
+        n_prompt = min(len(prompt), len(full))
+        labels = [-100] * n_prompt + full[n_prompt:]
+        full, labels = full[:max_len], labels[:max_len]
+        return {"input_ids": full, "attention_mask": [1] * len(full), "labels": labels}
+
+    ds = Dataset.from_list([{"messages": b["messages"]} for b in baris])
+    ds = ds.map(encode, remove_columns=ds.column_names)
+    # Buang contoh yang seluruh label-nya ter-mask (prompt kepanjangan) -> cegah loss nan.
+    ds = ds.filter(lambda e: any(t != -100 for t in e["labels"]))
+    return ds
 
 
 def main() -> int:
     args = parse_args()
 
     import torch
-    from peft import LoraConfig
-    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-    from trl import SFTConfig, SFTTrainer
-
-    # Workaround bug TRL: pada versi TRL baru, SFTTrainer.__init__ memanggil
-    # _patch_chunked_ce_lm_head() yang gagal (`functools.partial has no __func__`)
-    # ketika model punya hook accelerate dari device_map. Optimasi memori LM-head ini
-    # tidak wajib untuk training; nonaktifkan agar init berhasil. Aman & no-op.
-    try:
-        import trl.trainer.sft_trainer as _sfttr
-        if hasattr(_sfttr, "_patch_chunked_ce_lm_head"):
-            _sfttr._patch_chunked_ce_lm_head = lambda *a, **k: None
-    except Exception:
-        pass
+    from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+    from transformers import (
+        AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig,
+        DataCollatorForSeq2Seq, Trainer, TrainingArguments,
+    )
 
     if not torch.cuda.is_available():
         print("ERROR: butuh GPU. Di Kaggle: Settings -> Accelerator -> GPU.", file=sys.stderr)
         return 2
 
-    # T4 (Kaggle) tidak mendukung bf16; P100/A100 mendukung. Pilih otomatis supaya
-    # skrip yang sama jalan di kedua tipe akselerator.
     bf16 = torch.cuda.is_bf16_supported()
     dtype = torch.bfloat16 if bf16 else torch.float16
     print(f"GPU: {torch.cuda.get_device_name(0)} | dtype: {dtype}")
 
-    print("Memuat data:")
-    ds_train = muat_split(args.train, args.tipe)
-    ds_val = muat_split(args.val, args.tipe) if args.val and args.val.exists() else None
-    if ds_val is None:
-        print("  (tanpa val — eval loss dilewati)")
-
     tokenizer = AutoTokenizer.from_pretrained(args.base_model)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+
+    print("Memuat data:")
+    ds_train = buat_dataset(muat_baris(args.train, args.tipe), tokenizer, args.max_seq_len)
+    ds_val = (buat_dataset(muat_baris(args.val, args.tipe), tokenizer, args.max_seq_len)
+              if args.val and args.val.exists() else None)
+    if ds_val is None:
+        print("  (tanpa val — eval loss dilewati)")
 
     quant = None
     if not args.no_4bit:
@@ -129,6 +127,14 @@ def main() -> int:
             bnb_4bit_compute_dtype=dtype,
         )
 
+    model = AutoModelForCausalLM.from_pretrained(
+        args.base_model,
+        quantization_config=quant,
+        torch_dtype=dtype,
+        device_map={"": 0},  # taruh semua di GPU 0 (cukup untuk 7B 4-bit di T4/P100 16GB)
+    )
+    model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
+
     peft_config = LoraConfig(
         r=args.lora_r,
         lora_alpha=args.lora_alpha,
@@ -137,8 +143,11 @@ def main() -> int:
         task_type="CAUSAL_LM",
         target_modules=TARGET_MODULES,
     )
+    model = get_peft_model(model, peft_config)
+    model.config.use_cache = False
+    model.print_trainable_parameters()
 
-    cfg = SFTConfig(
+    targs = TrainingArguments(
         output_dir=str(args.out),
         num_train_epochs=args.epochs,
         max_steps=args.max_steps,
@@ -150,56 +159,43 @@ def main() -> int:
         gradient_checkpointing=True,
         gradient_checkpointing_kwargs={"use_reentrant": False},
         optim="paged_adamw_8bit" if not args.no_4bit else "adamw_torch",
-        max_length=args.max_seq_len,
-        packing=False,  # contoh kita pendek & mandiri; packing malah mencampur konteks
-        bf16=bf16,
-        fp16=not bf16,
         logging_steps=10,
         save_steps=args.save_steps,
         save_total_limit=2,
         eval_strategy="epoch" if ds_val is not None else "no",
+        bf16=bf16,
+        fp16=not bf16,
         report_to="none",
         seed=args.seed,
     )
 
-    # Muat model secara eksplisit (bukan lewat model_init_kwargs) supaya kompatibel
-    # lintas versi TRL — di TRL baru SFTTrainer tidak lagi menerima model_init_kwargs.
-    model = AutoModelForCausalLM.from_pretrained(
-        args.base_model,
-        quantization_config=quant,
-        torch_dtype=dtype,
-        device_map="auto",
-    )
-    model.config.use_cache = False  # wajib saat gradient checkpointing aktif
+    collator = DataCollatorForSeq2Seq(tokenizer, padding=True, label_pad_token_id=-100)
 
-    trainer = SFTTrainer(
+    trainer = Trainer(
         model=model,
-        args=cfg,
+        args=targs,
         train_dataset=ds_train,
         eval_dataset=ds_val,
-        peft_config=peft_config,
+        data_collator=collator,
         processing_class=tokenizer,
     )
 
-    # Hanya resume kalau memang ada checkpoint; kalau tidak, Trainer melempar error
-    # dan sesi Kaggle yang sudah antre lama jadi terbuang percuma.
     ada_checkpoint = args.resume and any(args.out.glob("checkpoint-*"))
     if args.resume and not ada_checkpoint:
         print(f"--resume diminta tapi tidak ada checkpoint-* di {args.out}; mulai dari awal.")
     trainer.train(resume_from_checkpoint=ada_checkpoint or None)
 
     args.out.mkdir(parents=True, exist_ok=True)
-    trainer.save_model(str(args.out))
+    trainer.save_model(str(args.out))       # adapter_model.safetensors + adapter_config.json
     tokenizer.save_pretrained(str(args.out))
 
-    # Jejak reproduksi: hyperparameter apa yang menghasilkan adapter ini.
     meta = {
         "base_model": args.base_model,
         "lora": {"r": args.lora_r, "alpha": args.lora_alpha, "dropout": args.lora_dropout,
                  "target_modules": TARGET_MODULES},
         "training": {"epochs": args.epochs, "lr": args.lr, "max_seq_len": args.max_seq_len,
                      "batch_size": args.batch_size, "grad_accum": args.grad_accum,
-                     "quantized_4bit": not args.no_4bit, "seed": args.seed},
+                     "max_steps": args.max_steps, "quantized_4bit": not args.no_4bit, "seed": args.seed},
         "data": {"train": str(args.train), "val": str(args.val) if args.val else None,
                  "n_train": len(ds_train), "n_val": len(ds_val) if ds_val else 0,
                  "tipe": args.tipe or "semua"},
