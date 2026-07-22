@@ -1,0 +1,34 @@
+{
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "epochs": 1.0,
+    "lr": 0.0002,
+    "max_seq_len": 1024,
+    "batch_size": 1,
+    "grad_accum": 8,
+    "max_steps": -1,
+    "quantized_4bit": true,
+    "seed": 42
+  },
+  "data": {
+    "train": "../../data/sft/train.jsonl",
+    "val": "../../data/sft/val.jsonl",
+    "n_train": 2182,
+    "n_val": 278,
+    "tipe": "semua"
+  }
+}

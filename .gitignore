@@ -14,10 +14,13 @@ npm-debug.log*
 data/sft/
 
 # Model — bobot besar TIDAK di-commit langsung; adapter LoRA (kecil) boleh.
+# Yang di-commit: adapter, config, tokenizer, + training_meta.json & eval.json (bukti).
+# Yang TIDAK: subfolder checkpoint-* (optimizer state, besar) tetap terabaikan.
 model/checkpoints/*
 !model/checkpoints/.gitkeep
 !model/checkpoints/*.safetensors
-!model/checkpoints/adapter_config.json
+!model/checkpoints/*.json
+!model/checkpoints/*.jinja
 
 # OS
 .DS_Store
