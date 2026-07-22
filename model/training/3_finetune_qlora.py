@@ -16,6 +16,12 @@ Pakai (di sel notebook Kaggle):
 """
 from __future__ import annotations
 
+import os
+# Paksa 1 GPU. Di Kaggle T4 x2, Trainer otomatis membungkus model dengan DataParallel
+# yang BENTROK dengan model terkuantisasi 4-bit (CUBLAS_STATUS_EXECUTION_FAILED).
+# Harus di-set sebelum torch meng-inisialisasi CUDA.
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
+
 import argparse
 import json
 import sys
