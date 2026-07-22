@@ -89,6 +89,17 @@ def main() -> int:
     from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
     from trl import SFTConfig, SFTTrainer
 
+    # Workaround bug TRL: pada versi TRL baru, SFTTrainer.__init__ memanggil
+    # _patch_chunked_ce_lm_head() yang gagal (`functools.partial has no __func__`)
+    # ketika model punya hook accelerate dari device_map. Optimasi memori LM-head ini
+    # tidak wajib untuk training; nonaktifkan agar init berhasil. Aman & no-op.
+    try:
+        import trl.trainer.sft_trainer as _sfttr
+        if hasattr(_sfttr, "_patch_chunked_ce_lm_head"):
+            _sfttr._patch_chunked_ce_lm_head = lambda *a, **k: None
+    except Exception:
+        pass
+
     if not torch.cuda.is_available():
         print("ERROR: butuh GPU. Di Kaggle: Settings -> Accelerator -> GPU.", file=sys.stderr)
         return 2
