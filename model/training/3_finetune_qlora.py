@@ -43,9 +43,9 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--tipe", nargs="*", default=None,
                     help="Batasi jenis contoh, mis. --tipe coach_sesi coach_turn (default: semua).")
 
-    ap.add_argument("--epochs", type=float, default=3.0)
+    ap.add_argument("--epochs", type=float, default=1.0)
     ap.add_argument("--lr", type=float, default=2e-4)
-    ap.add_argument("--max-seq-len", type=int, default=2048)
+    ap.add_argument("--max-seq-len", type=int, default=1024)
     ap.add_argument("--batch-size", type=int, default=1)
     ap.add_argument("--grad-accum", type=int, default=8)
     ap.add_argument("--warmup-ratio", type=float, default=0.03)
@@ -166,6 +166,7 @@ def main() -> int:
         lr_scheduler_type="cosine",
         warmup_ratio=args.warmup_ratio,
         per_device_train_batch_size=args.batch_size,
+        per_device_eval_batch_size=1,
         gradient_accumulation_steps=args.grad_accum,
         gradient_checkpointing=True,
         gradient_checkpointing_kwargs={"use_reentrant": False},
@@ -173,7 +174,9 @@ def main() -> int:
         logging_steps=10,
         save_steps=args.save_steps,
         save_total_limit=2,
-        eval_strategy="epoch" if ds_val is not None else "no",
+        # Eval in-training dimatikan: materialisasi logits atas vocab 152k bikin OOM di
+        # T4. Metrik sebenarnya (adapter vs base) dihitung terpisah oleh 4_evaluate.py.
+        eval_strategy="no",
         bf16=bf16,
         fp16=not bf16,
         report_to="none",
